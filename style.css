@@ -1,0 +1,56 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body {
+    background-image: url('anh/1.jpg'); /* Thay '1.jpg' bằng đường dẫn đến hình ảnh của bạn */
+    background-size: cover; /* Đảm bảo hình ảnh phủ kín toàn bộ phần tử body */
+    background-position: center; /* Căn giữa hình ảnh nền */
+    background-repeat: no-repeat; /* Ngăn chặn hình ảnh nền lặp lại */
+}
+html {
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    color: rgb(6, 32, 23);
+    /* background-color: rgb(192, 206, 201); */
+    text-rendering: optimizeLegibility;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px; /* Điều chỉnh khoảng cách biên để phù hợp */
+    background-color: #123; /* Màu nền cho navbar, điều chỉnh theo ý muốn */
+}
+
+.logo {
+    width: 350px;
+    height: 200px; /* Điều chỉnh kích thước logo */
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 20px; /* Khoảng cách giữa các menu item */
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white; /* Màu chữ cho các liên kết */
+    font-size: 110%;
+    font-weight: 700;
+    transition: color 0.5s;
+}
+
+.menu li a:hover,
+.menu li a:active {
+    color: #cccccc; /* Màu khi hover hoặc active */
+}
