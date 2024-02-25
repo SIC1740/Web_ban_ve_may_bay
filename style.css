@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body {
-    background-image: url('anh/1.jpg'); /* Thay '1.jpg' bằng đường dẫn đến hình ảnh của bạn */
+    background-image: linear-gradient(45deg,rgba(2,33,64, 0.8) 55%,rgba(45,95,93,0.85)),url('anh/anh10.jpg'); /* Thay '1.jpg' bằng đường dẫn đến hình ảnh của bạn */
     background-size: cover; /* Đảm bảo hình ảnh phủ kín toàn bộ phần tử body */
     background-position: center; /* Căn giữa hình ảnh nền */
     background-repeat: no-repeat; /* Ngăn chặn hình ảnh nền lặp lại */
