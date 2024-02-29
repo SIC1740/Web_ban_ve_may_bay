@@ -16,6 +16,11 @@ html {
     /* background-color: rgb(192, 206, 201); */
     text-rendering: optimizeLegibility;
 }
+.clearfix::after{
+    content: " ";
+    display: table;
+    clear: both;
+}
 /* --HEADER--*/
 header{
     background-size: cover;
@@ -31,8 +36,10 @@ header{
 }
 
 .logo {
-    width: 300px;
-    height: 200px;
+    width: 100px;
+    height: 66x;
+    margin-left: 70px;
+    margin-top: -10px;
 }
 
 .menu {
@@ -50,7 +57,7 @@ header{
 .menu li a {
     text-decoration: none;
     color: white; /* Màu chữ cho các liên kết */
-    font-size: 110%;
+    font-size: 60%;
     font-weight: 700;
     transition: color 0.5s;
 }
@@ -84,10 +91,12 @@ header{
   .vietnam-airlines-section .text-content h4 {
     color: #007bff; /* Using a brand color for heading */
     margin-bottom: 15px;
+    font-size: 20px;
   }
   
   .vietnam-airlines-section .text-content p {
     color: #6c757d; /* Soft color for text for readability */
+    font-size: 20px;
   }
   
   @media (max-width: 768px) {
@@ -109,7 +118,7 @@ header{
     line-height: 200%;
     margin-top: 70px;
     word-spacing: 1px;
-    font-size: 95%;
+    font-size: 50%;
 }
 
 .information .small-icon{
@@ -122,13 +131,13 @@ header{
 }
 
 .social-icons{
-    margin-top: 50px;
+    margin-top: 30px;
     list-style: none;
 }
 
 .social-icons li{
     display: inline-block;
-    font-size: 250%;
+    font-size: 100%;
     margin-left: 20px;
     color: white;
 }
@@ -149,4 +158,5 @@ footer{
     background-color: #494949;
     color: white;
     padding: 20px;
+    font-size: 15px;
 }
