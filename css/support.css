@@ -3,12 +3,6 @@
     margin: 0px;
     box-sizing: border-box;
 }
-body {
-    background-image: linear-gradient(45deg,rgba(2,33,64, 0.8) 55%,rgba(45,95,93,0.85)),url('image/anh10.jpg'); /* Thay '1.jpg' bằng đường dẫn đến hình ảnh của bạn */
-    background-size: cover; /* Đảm bảo hình ảnh phủ kín toàn bộ phần tử body */
-    background-position: center; /* Căn giữa hình ảnh nền */
-    background-repeat: no-repeat; /* Ngăn chặn hình ảnh nền lặp lại */
-} 
 html {
     font-family: 'Lato', sans-serif;
     font-size: 30px;
@@ -21,13 +15,30 @@ html {
     display: table;
     clear: both;
 }
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+.p-long{
+    text-align: center;
+    color: #265077;
+    font-size: 22px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 70%;
+    margin-left: 15%;
+    line-height: 140%;
+}
 /* --HEADER--*/
 header{
+    position: relative;
+    background-image: linear-gradient(45deg, rgba(229, 234, 240, 0.8) 55%, rgba(45,95,93,0.85)), url(../anh/anh5.jpg);
     background-size: cover;
-    background-position: center;
-    height: 100vh;
+    background-position: top;
+    height: 30vh; /* Đã chỉnh sửa từ 100vh xuống 50vh */
     background-attachment: fixed;
 }
+
 .navbar {
     display: flex;
     align-items: center;
@@ -37,6 +48,7 @@ header{
 
 .logo {
     width: 100px;
+    height: 66x;
     margin-left: 70px;
     margin-top: -10px;
 }
@@ -45,7 +57,7 @@ header{
     list-style: none;
     display: flex;
     align-items: center;
-    margin: 0px 300px;
+    margin: 0 300px;
     padding: 0;
 }
 
@@ -64,6 +76,17 @@ header{
 .menu li a:hover,
 .menu li a:active {
     color: #cccccc; /* Màu khi hover hoặc active */
+}
+.heading-main-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-20%, -50%);
+    width: 1140px;
+    margin-top: 20px;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    color: rgba(6, 124, 145, 0.644);
 }
 /* --INTRO-- */
 .vietnam-airlines-section .section-wrapper {
@@ -106,7 +129,7 @@ header{
   
 /* --CONTACT-- */
 .contact-section{
-    background-image: linear-gradient(45deg,rgba(2,33,64, 0.8) 55%,rgba(45,95,93,0.85)),url('../image/anh5.jpg');
+    background-image: linear-gradient(45deg,rgba(2,33,64, 0.8) 55%,rgba(45,95,93,0.85)),url('../img/background5.jpeg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
