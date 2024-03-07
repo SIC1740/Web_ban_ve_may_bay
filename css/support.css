@@ -88,6 +88,90 @@ header{
     font-size: 20px;
     color: rgba(6, 124, 145, 0.644);
 }
+/* --SUPPORT-- */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+.payment-section {
+  max-width: 1000px;
+  margin: 20px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+.payment-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  font: 25px / 24px Muli, sans-serif;
+}
+
+.payment-titles {
+  width: 33.3333%;
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-title, .counter-payment {
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #eaeaea;
+}
+.payment1, .payment2 {
+  text-decoration: none;
+}
+ .payment1:hover, .payment1:active {
+  color: rgb(5, 87, 62);
+}
+.payment2:hover, .payment2:active {
+  color: rgb(5, 87, 62);
+}
+  .payment-details {
+    flex-grow: 1;
+    font: 20px / 24px Muli, sans-serif;
+  }
+  
+  .payment-option {
+    padding: 20px;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .agribank {
+    padding-left: 20px;
+  }
+  
+  .bank-name {
+    font-weight: bold;
+    color: #0056b3; /* Adjust to match the exact color from the image */
+    margin-bottom: 10px;
+  }
+  
+  .account-info {
+    line-height: 1.6;
+  }
+  
+  .account-info div {
+    margin-bottom: 5px;
+  }
+  
+  .account-info span {
+    font-weight: bold;
+  }
+  
+  /* Adjust the CSS as necessary to match the specific design requirements */
+  
 /* --INTRO-- */
 .vietnam-airlines-section .section-wrapper {
     background-color: #eef3f7; /* Lighter background to distinguish the section */
