@@ -178,7 +178,7 @@ body {
   }
   hr{
     border: none;
-    border-top: 1px dashed rgb(13, 12, 78);
+    border-top: 3px dashed rgb(67, 64, 197);
     margin: 20px 0;
   }
   .address-icon {
