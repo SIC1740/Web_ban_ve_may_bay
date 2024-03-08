@@ -138,39 +138,77 @@ body {
 .payment2:hover, .payment2:active {
   color: rgb(5, 87, 62);
 }
-  .payment-details {
-    flex-grow: 1;
-    font: 20px / 24px Muli, sans-serif;
-  }
-  
-  .payment-option {
+.payment-option2 {
+    width: 66.6667%;
     padding: 20px;
-    border-bottom: 1px solid #eaeaea;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
   }
   
-  .agribank {
-    padding-left: 20px;
+  .support-payment, .Offices {
+    margin-bottom: 20px;
   }
   
-  .bank-name {
-    font-weight: bold;
-    color: #0056b3; /* Adjust to match the exact color from the image */
+  .support-payment > div, .Offices > .Office-header {
+    font-size: 18px;
+    color: #333;
     margin-bottom: 10px;
   }
   
-  .account-info {
-    line-height: 1.6;
+  .support-payment ul {
+    list-style-type: disc;
+    font-family: Arial, sans-serif;
+    padding: 20px;
   }
   
-  .account-info div {
+  .support-payment ul li {
+    font-size: 16px;
     margin-bottom: 5px;
   }
   
-  .account-info span {
-    font-weight: bold;
+  .support-payment1, .Office-address {
+    font-size: 16px;
+    color: #666;
   }
   
-  /* Adjust the CSS as necessary to match the specific design requirements */
+  .Office-header {
+    font-weight: bold;
+    color: #333;
+  }
+  hr{
+    border: none;
+    border-top: 3px dashed rgb(67, 64, 197);
+    margin: 20px 0;
+  }
+  .address-icon {
+    margin-right: 5px;
+  }
+  
+  /* Hover effects for interactive elements */
+  .payment-title:hover, .counter-payment:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+  }
+  
+  /* Responsive design adjustments */
+  @media (max-width: 768px) {
+    .payment-section {
+      flex-direction: column;
+    }
+  
+    .payment-container {
+      flex-direction: column;
+    }
+  
+    .payment-titles, .payment-option2 {
+      width: 100%;
+    }
+  
+    .payment-title, .counter-payment {
+      text-align: center;
+    }
+  }
   
 /* --INTRO-- */
 .vietnam-airlines-section .section-wrapper {
