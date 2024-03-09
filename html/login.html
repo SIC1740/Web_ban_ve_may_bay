@@ -41,16 +41,16 @@
     <section class="login-section" style="background-image: url('path-to-your-background-image.jpg');">
         <div class="login-container">
           <h2>Đăng Nhập</h2>
-          <form class="login-form" id="#form-1">
+          <form class="login-form" id="form-2">
             <div class="input-group">
-              <label for="username">Số điện thoại/Email/Tên đăng nhập</label>
-              <input type="text" id="username" name="username" required>
-              <span>Vui lòng nhập email</span>
+              <label for="email">Email</label>
+              <input type="text" class="form-control" id="email" name="email" placeholder="VD: sivu@gmail.com" >
+              <span class="form-message"></span>
             </div>
             <div class="input-group">
               <label for="password">Mật khẩu</label>
-              <input type="password" id="password" name="password" required>
-              <span>Mật khẩu phải có ít nhất 6 chữ số</span>
+              <input type="password" class="form-control" id="password" name="password" >
+              <span class="form-message"></span>
             </div>
             <div class="forgot-password">
               <a href="#">Quên mật khẩu?</a>
@@ -112,5 +112,21 @@
     <footer>
       <p>Copyright &copy; 2024 by Vu Van Si</p>
     </footer>
+    <script src="../validator.js"></script>
+    <script>
+      Validator({
+        form: '#form-2',
+        formGroupSelector: '.input-group',
+        errorSelector: '.form-message',
+        rules: [
+          Validator.isRequired('#email'),
+          Validator.isEmail('#email'),
+          Validator.minLength('#password',6,),
+        ] ,
+        onSubmit: function(data){
+          console.log(data);
+        }
+      });
+    </script>
   </body>
 </html>
