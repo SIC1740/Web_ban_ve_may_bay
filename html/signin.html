@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -41,23 +41,27 @@
     <section class="login-section" style="background-image: url('path-to-your-background-image.jpg');">
         <div class="login-container">
           <h2>Đăng Ký</h2>
-          <form class="login-form">
+          <form class="login-form" id="form-1">
             <div class="input-group">
-              <label for="username">Tên đăng nhập</label>
-              <input type="text" id="username" name="username" required>
+              <label for="fullname">Tên người dùng</label>
+              <input type="text" class="form-control" id="fullname" name="fullname" placeholder="VD: Sĩ Vũ" >
+              <span class="form-message"></span>
             </div>
             <div class="input-group">
-              <label for="username">Địa chỉ Email</label>
-              <input type="text" id="username" name="username" required>
+              <label for="email">Email</label>
+              <input type="text" class="form-control" id="email" name="email" placeholder="VD: sivu@gmail.com" >
+              <span class="form-message"></span>
             </div>
             <div class="input-group">
               <label for="password">Mật khẩu</label>
-              <input type="password" id="password" name="password" required>
+              <input type="password" class="form-control" id="password" name="password" >
+              <span class="form-message"></span>
             </div>
             <!-- New Confirm Password Input -->
             <div class="input-group">
               <label for="confirm-password">Xác nhận mật khẩu</label>
-              <input type="password" id="confirm-password" name="confirm_password" required>
+              <input type="password" class="form-control" id="confirm-password" name="confirm_password" >
+              <span class="form-message"></span>
             </div>
             <div class="forgot-password">
               <!-- <a href="#">Quên mật khẩu?</a> -->
@@ -119,5 +123,26 @@
     <footer>
       <p>Copyright &copy; 2024 by Vu Van Si</p>
     </footer>
+    <script src="../validator.js"></script>
+    <script>
+      Validator({
+        form: '#form-1',
+        formGroupSelector: '.input-group',
+        errorSelector: '.form-message',
+        rules: [
+          Validator.isRequired('#fullname'),
+          Validator.isRequired('#email'),
+          Validator.isEmail('#email'),
+          Validator.minLength('#password',6,),
+          Validator.isRequired('#confirm-password'),
+          Validator.isConfirmed('#confirm-password',function(){
+            return document.querySelector('#form-1 #password').value;
+          },"Mật khẩu nhập lại không chính xác"),
+        ] ,
+        onSubmit: function(data){
+          console.log(data);
+        }
+      });
+    </script>
   </body>
 </html>
