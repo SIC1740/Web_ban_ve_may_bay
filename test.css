@@ -3,6 +3,12 @@
     margin: 0px;
     box-sizing: border-box;
 }
+body {
+    background-image: linear-gradient(45deg,rgba(2,33,64, 0.8) 55%,rgba(45,95,93,0.85)),url('image/anh10.jpg'); /* Thay '1.jpg' bằng đường dẫn đến hình ảnh của bạn */
+    background-size: cover; /* Đảm bảo hình ảnh phủ kín toàn bộ phần tử body */
+    background-position: center; /* Căn giữa hình ảnh nền */
+    background-repeat: no-repeat; /* Ngăn chặn hình ảnh nền lặp lại */
+} 
 html {
     font-family: 'Lato', sans-serif;
     font-size: 30px;
@@ -15,60 +21,53 @@ html {
     display: table;
     clear: both;
 }
-.row{
-    max-width: 1140px;
-    margin: 0 auto;
-}
-.p-long{
-    text-align: center;
-    color: #265077;
-    font-size: 22px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    width: 70%;
-    margin-left: 15%;
-    line-height: 140%;
-}
 /* --HEADER--*/
 header{
-    position: relative;
-    background-image: linear-gradient(45deg, rgba(229, 234, 240, 0.8) 55%, rgba(45,95,93,0.85)), url(../anh/anh5.jpg);
     background-size: cover;
-    background-position: top;
-    height: 30vh; /* Đã chỉnh sửa từ 100vh xuống 50vh */
+    background-position: center;
+    height: 100vh;
     background-attachment: fixed;
 }
-
 .navbar {
-    display: flex;
-    align-items: center;
-     padding: 0 50px;  /*Điều chỉnh khoảng cách biên để phù hợp */
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+  padding: 1%;
      background-color: #123; 
 }
 
 .logo {
-    width: 100px;
-    height: 66x;
-    margin-left: 70px;
-    margin-top: -10px;
+  flex-grow: 1;
+  max-width: 100px;
+  margin-top: 0;
+
 }
 
 .menu {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    margin: 0 300px;
-    padding: 0;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  flex-grow: 0;
+  justify-content: center;
 }
 
 .menu li {
-    margin: 0 20px; /* Khoảng cách giữa các menu item */
+    margin-left:;
+    padding: 0 40px;
+}
+.menu li:first-child {
+  padding-left: 0;
 }
 
+.menu li:last-child {
+  padding-right: 0;
+}
 .menu li a {
     text-decoration: none;
-    color: white; /* Màu chữ cho các liên kết */
-    font-size: 60%;
+    color: white; 
+    font-size: 15px;
     font-weight: 700;
     transition: color 0.5s;
 }
@@ -76,102 +75,23 @@ header{
 .menu li a:hover,
 .menu li a:active {
     color: #cccccc; /* Màu khi hover hoặc active */
+    background-color: rgba(255, 255, 255, 0.2); /* Subtle hover effect */
+    transform: translateY(-2px); /* Slight lift effect */
 }
-.heading-main-box{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-20%, -50%);
-    width: 1140px;
-    margin-top: 20px;
-    font-family: 'Lato', sans-serif;
-    font-size: 20px;
-    color: rgba(6, 124, 145, 0.644);
-}
-/* --SUPPORT-- */
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f4f4f4;
-}
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+  }
 
-.payment-section {
-  max-width: 1000px;
-  margin: 20px auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  display: flex;
-  justify-content: space-between;
-}
+  .menu {
+      flex-direction: column;
+  }
 
-.payment-container {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  font: 25px / 24px Muli, sans-serif;
+  .menu li {
+      width: 100%; /* Full width menu items */
+      text-align: center;
+  }
 }
-
-.payment-titles {
-  width: 33.3333%;
-  display: flex;
-  flex-direction: column;
-}
-
-.payment-title, .counter-payment {
-  padding: 20px;
-  background-color: #f8f8f8;
-  color: #333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 1px solid #eaeaea;
-}
-.payment1, .payment2 {
-  text-decoration: none;
-}
- .payment1:hover, .payment1:active {
-  color: rgb(5, 87, 62);
-}
-.payment2:hover, .payment2:active {
-  color: rgb(5, 87, 62);
-}
-  .payment-details {
-    flex-grow: 1;
-    font: 20px / 24px Muli, sans-serif;
-  }
-  
-  .payment-option {
-    padding: 20px;
-    border-bottom: 1px solid #eaeaea;
-  }
-  
-  .agribank {
-    padding-left: 20px;
-  }
-  
-  .bank-name {
-    font-weight: bold;
-    color: #0056b3; /* Adjust to match the exact color from the image */
-    margin-bottom: 10px;
-  }
-  
-  .account-info {
-    line-height: 1.6;
-  }
-  
-  .account-info div {
-    margin-bottom: 5px;
-  }
-  
-  .account-info span {
-    font-weight: bold;
-  }
-  
-  /* Adjust the CSS as necessary to match the specific design requirements */
-  
 /* --INTRO-- */
 .vietnam-airlines-section .section-wrapper {
     background-color: #eef3f7; /* Lighter background to distinguish the section */
@@ -213,7 +133,7 @@ body {
   
 /* --CONTACT-- */
 .contact-section{
-    background-image: linear-gradient(45deg,rgba(2,33,64, 0.8) 55%,rgba(45,95,93,0.85)),url('../img/background5.jpeg');
+    background-image: linear-gradient(45deg,rgba(2,33,64, 0.8) 55%,rgba(45,95,93,0.85)),url('../image/anh5.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
