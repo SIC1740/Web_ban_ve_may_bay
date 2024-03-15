@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Webbay</title>
+    <title>LOGIN</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
@@ -14,27 +14,54 @@
       href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900"
       rel="stylesheet"
     />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="test.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset('backend/asset/css/login.css')}}" />
   </head>
   <body>
     <header>
       <div class="navbar">
-        <ul class="menu row">
-          <li class = "col-xxl-3"><a href="#"><img class="logo" src="image/logoptit.jpg" alt="logo" /></a></li>
-          <li class = "col"><a href="webbay.html">Trang chủ</a></li>
-          <li class = "col"><a href="html/intro.html">Giới thiệu</a></li>
-          <li class = "col"><a href="#">Tra cứu</a></li>
-          <li class = "col"><a href="#">Lịch sử giao dịch</a></li>
-          <li class = "col"><a href="html/login.html">Đăng Nhập</a></li>
-          <li class = "col"><a href="html/signin.html">Đăng Kí</a></li>
-          <li class = "col"><a href="html/support.html">Hướng dẫn thanh toán</a></li>
-          <li class="col-xl-3"></li>
+        <a href="#"><img class="logo" src="{{asset('backend/asset/image/logoptit.jpg')}}" alt="logo" /></a>
+        <ul class="menu">
+          <li><a href="#">Trang chủ</a></li>
+          <li><a href="#">Giới thiệu</a></li>
+          <li><a href="#">Tra cứu</a></li>
+          <li><a href="#">Lịch sử giao dịch</a></li>
+          <li><a href="#">Đăng Nhập</a></li>
+          <li><a href="{{route('show-form-register')}}">Đăng Kí</a></li>
+          <li><a href="#">Hướng dẫn thanh toán</a></li>
         </ul>
         <div class="clearfix"></div>
+        <div class="row">
+          <div class="heading-main-box">
+              <!-- <h1>
+                Đăng nhập
+              </h1> -->
+          </div>
       </div>
     </header>
+    <section class="login-section" style="background-image: url('path-to-your-background-image.jpg');">
+        <div class="login-container">
+          <h2>Đăng Nhập</h2>
+          <form class="login-form" id="form-2">
+            <div class="input-group">
+              <label for="email">Email</label>
+              <input type="text" class="form-control" id="email" name="email" placeholder="VD: sivu@gmail.com" >
+              <span class="form-message"></span>
+            </div>
+            <div class="input-group">
+              <label for="password">Mật khẩu</label>
+              <input type="password" class="form-control" id="password" name="password" >
+              <span class="form-message"></span>
+            </div>
+            <div class="forgot-password">
+              <a href="{{route('formmiss')}}">Quên mật khẩu?</a>
+            </div>
+            <button type="submit">ĐĂNG NHẬP</button>
+          </form>
+          <div class="register-link">
+            <p>Chưa có tài khoản? <a href="#">Đăng ký</a></p>
+          </div>
+        </div>
+      </section>
     <section class="vietnam-airlines-section">
       <div class="section-wrapper">
         <div class="section-inner">
@@ -85,5 +112,6 @@
     <footer>
       <p>Copyright &copy; 2024 by Vu Van Si</p>
     </footer>
+    </script>
   </body>
 </html>

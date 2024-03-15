@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SEARCH</title>
+    <title>SUPPORT</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
@@ -14,25 +14,19 @@
       href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="../css/search.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset('backend/asset/css/payment.css')}}" />
   </head>
   <body>
     <header>
       <div class="navbar">
-        <a href="#"><img class="logo" src="../../image/logoptit.jpg" alt="logo" /></a>
+        <a href="#"><img class="logo" src="{{asset('backend/asset/image/logoptit.jpg')}}" alt="logo" /></a>
         <ul class="menu">
-          <li><a href="../webbay.html">Trang chủ</a></li>
-          <li><a href="intro.html">Giới thiệu</a></li>
-          <li><a href="#">Tra cứu</a></li>
+          <li><a href="{{route('trangchu')}}">Trang chủ</a></li>
+          <li><a href="{{route('intro')}}">Giới thiệu</a></li>
+          <li><a href="{{route('search')}}">Tra cứu</a></li>
           <li><a href="#">Lịch sử giao dịch</a></li>
-          <li><a href="support.html">Hướng dẫn thanh toán</a></li>
-          <li class="contact-info">
-            <span class="phone-number">📞 0817 952 741</span>
-            <div class="admin-info">
-              <span class="admin-name">Admin</span>
-              <div class="admin-icon">👤</div>
-              </div>
-          </li>
+          <li><a href="{{route('logout')}}">Thoát</a></li>
+          <li><a href="{{route('support')}}">Hướng dẫn thanh toán</a></li>
         </ul>
         <div class="clearfix"></div>
         <div class="row">
@@ -43,28 +37,49 @@
           </div>
       </div>
     </header>
-    <section class="search-container">
-        <form>
-            <div class="search-field">
-                <label for="fromLocation">Điểm đi</label>
-                <input type="text" id="fromLocation" name="fromLocation" placeholder="Hà Nội (HAN)">
+    <section class="payment-section">
+      <div class="payment-container">
+        <!-- Left Column: Titles -->
+        <div class="payment-titles">
+          <!-- Bank Transfer Title -->
+          <div class="payment-title">
+            <a href="{{route('support')}}" class="payment1"><i>Chuyển khoản ngân hàng</i></a>
+          </div>
+    
+          <!-- Counter Payment Title -->
+          <div class="payment-title counter-payment">
+            <a href="#" class="payment2" ><i>Thanh toán tại văn phòng PTIT Airlines</i></a>
+          </div>
+        </div>
+    
+        <!-- Right Column: Bank Details -->
+        <div class="payment-option2">
+            <div class="support-payment">
+                <div>Sau khi đặt hàng thành công, Quý khách vui lòng qua văn
+                    phòng PTIT Airlines để thanh toán và nhận vé.
+                </div>
+                <ul class="custom-list">
+                    <li><b>Thời gian giao dịch: </b>Từ 8h sáng tới 20h30 hàng ngày</li>
+                    <li><b>Phí giao dịch: </b> Miễn phí</li>
+                </ul>
+                <hr>
+                <div class="support-payment1">Vui lòng chọn đúng văn phòng gần địa chỉ nhà của quý khách</div>
             </div>
-            <div class="search-field">
-                <label for="toLocation">Điểm đến</label>
-                <input type="text" id="toLocation" name="toLocation" placeholder="Hồ Chí Minh (SGN)">
+            <div class="Offices">
+                <div class="Office-header">VĂN PHÒNG PTIT AIRLINE TẠI HÀ NỘI 
+                </div>
+                <div class="Office-address">
+                    <span class="address-icon">📍</span>
+                    Địa chỉ: Km10, Đường Nguyễn Trãi, Q.Hà Đông, Hà Nội.
+                </div>
+                <div class="Office-header"> VĂN PHÒNG PTIT AIRLINES TẠI TP.HỒ CHÍ MINH</div>
+                <div class="Office-address">
+                    <span class="address-icon">📍</span>
+                    Địa chỉ: Đường Man Thiện, P.Hiệp Phú, Quận 9, Tp.Hồ Chí Minh.
+                </div>
             </div>
-            <div class="search-field">
-                <label for="departureDate">Ngày đi</label>
-                <input type="date" id="departureDate" name="departureDate">
-            </div>
-            <div class="search-field">
-                <label for="price">Giá vé</label>
-                <input type="number" id="price" name="price" placeholder="Nhập giá">
-            </div>
-            <div class="search-field">
-                <button type="submit">Tìm kiếm</button>
-            </div>
-        </form>
+        </div>
+      </div>
     </section>
     <section class="vietnam-airlines-section">
       <div class="section-wrapper">

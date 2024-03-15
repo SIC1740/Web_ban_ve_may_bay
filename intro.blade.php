@@ -14,25 +14,19 @@
       href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="../css/intro.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset('backend/asset/css/intro.css')}}" />
   </head>
   <body>
     <header>
       <div class="navbar">
-        <a href="#"><img class="logo" src="../../image/logoptit.jpg" alt="logo" /></a>
+        <a href="#"><img class="logo" src="{{asset('backend/asset/image/logoptit.jpg')}}" alt="logo" /></a>
         <ul class="menu">
-          <li><a href="../webbay.html">Trang chủ</a></li>
-          <li><a href="intro.html">Giới thiệu</a></li>
-          <li><a href="#">Tra cứu</a></li>
+          <li><a href="{{route('trangchu')}}">Trang chủ</a></li>
+          <li><a href="#">Giới thiệu</a></li>
+          <li><a href="{{route('search')}}">Tra cứu</a></li>
           <li><a href="#">Lịch sử giao dịch</a></li>
-          <li><a href="support.html">Hướng dẫn thanh toán</a></li>
-          <li class="contact-info">
-            <span class="phone-number">📞 0817 952 741</span>
-            <div class="admin-info">
-              <span class="admin-name">Admin</span>
-              <div class="admin-icon">👤</div>
-              </div>
-          </li>
+          <li><a href="{{route('logout')}}">Thoát</a></li>
+          <li><a href="#">Hỗ trợ</a></li>
         </ul>
         <div class="clearfix"></div>
         <div class="row">

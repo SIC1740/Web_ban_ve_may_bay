@@ -1,9 +1,11 @@
+<form action="">
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SUPPORT</title>
+    <title>SEARCH</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
@@ -14,25 +16,19 @@
       href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900"
       rel="stylesheet"
     />
-
-<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
-
-    <link rel="stylesheet" type="text/css" href="../css/support.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset('backend/asset/css/search.css')}}" />
   </head>
   <body>
     <header>
       <div class="navbar">
-        <a href="#"><img class="logo" src="../image/logoptit.jpg" alt="logo" /></a>
+        <a href="#"><img class="logo" src="{{asset('backend/asset/image/logoptit.jpg')}}" alt="logo" /></a>
         <ul class="menu">
-          <li><a href="../webbay.html">Trang chủ</a></li>
-          <li><a href="intro.html">Giới thiệu</a></li>
+          <li><a href="{{route('trangchu')}}">Trang chủ</a></li>
+          <li><a href="{{route('intro')}}">Giới thiệu</a></li>
           <li><a href="#">Tra cứu</a></li>
           <li><a href="#">Lịch sử giao dịch</a></li>
-          <li><a href="login.html">Đăng Nhập</a></li>
-          <li><a href="signin.html">Đăng Kí</a></li>
-          <li><a href="support.html">Hướng dẫn thanh toán</a></li>
+          <li><a href="{{route('logout')}}">Thoát</a></li>
+          <li><a href="#">Hướng dẫn thanh toán</a></li>
         </ul>
         <div class="clearfix"></div>
         <div class="row">
@@ -43,55 +39,24 @@
           </div>
       </div>
     </header>
-    <section class="payment-section">
-      <div class="payment-container">
-        <!-- Left Column: Titles -->
-        <div class="payment-titles">
-          <!-- Bank Transfer Title -->
-          <div class="payment-title">
-            <a href="support.html" class="payment1"><i>Chuyển khoản ngân hàng</i></a>
-          </div>
-    
-          <!-- Counter Payment Title -->
-          <div class="payment-title counter-payment">
-            <a href="payment.html" class="payment2" ><i>Thanh toán tại văn phòng PTIT Airlines</i></a>
-          </div>
-        </div>
-    
-        <!-- Right Column: Bank Details -->
-        <div class="payment-details">
-          <!-- Agribank Details -->
-          <div class="payment-option agribank">
-            <div class="bank-name">Ngân Hàng Nông Nghiệp Và Phát Triển Nông Thôn Việt Nam - Agribank</div>
-            <div class="account-info">
-              <div>Tên tài khoản: <span>PTIT Airlines</span></div>
-              <div>Số tài khoản: <span>3408 2053 9458 4</span></div>
-              <div>Chi Nhánh: <span>Hà Nội</span></div>
+    <section class="search-container">
+        <form>
+            <div class="search-field">
+                <label for="source">Điểm đi</label>
+                <input type="text" id="source" name="source" placeholder="source">
             </div>
-          </div>
-    
-          <!-- MBBank Details -->
-          <div class="payment-option mb-bank">
-            <div class="bank-name">Ngân hàng Quân đội - MBBank</div>
-            <div class="account-info">
-              <div>Tên tài khoản: <span>PTIT Airlines</span></div>
-              <div>Số tài khoản: <span>0836 7890 87</span></div>
-              <div>Chi Nhánh: <span>Hà Nội</span></div>
+            <div class="search-field">
+                <label for="destination">Điểm đến</label>
+                <input type="text" id="destination" name="destination" placeholder="destination">
             </div>
-          </div>
-          <!-- Vietcombank -->
-          <div class="payment-option vietcombank">
-            <div class="bank-name"> Ngân hàng TMCP Ngoại Thương Việt Nam - Vietcombank</div>
-            <div class="account-info">
-              <div>Tên tài khoản: <span>PTIT Airlines</span></div>
-              <div>Số tài khoản: <span>9839 3968 28</span></div>
-              <div>Chi nhánh: <span>Hà Nội</span></div>
-
+            <div class="search-field">
+                <label for="time">Ngày đi</label>
+                <input type="date" id="time" name="time">
             </div>
-          </div>
-          <!-- Additional banks can be added following the same structure -->
-        </div>
-      </div>
+            <div class="search-field">
+                <button type="submit">Tìm kiếm</button>
+            </div>
+        </form>
     </section>
     <section class="vietnam-airlines-section">
       <div class="section-wrapper">
@@ -145,3 +110,4 @@
     </footer>
   </body>
 </html>
+</form>

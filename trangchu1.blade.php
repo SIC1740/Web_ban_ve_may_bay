@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MISSPASSWORD</title>
+    <title>Webbay</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
@@ -14,52 +14,23 @@
       href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="../css/misspassword.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset('backend/asset/css/style.css')}}" />
   </head>
   <body>
     <header>
       <div class="navbar">
-        <a href="#"><img class="logo" src="../image/logoptit.jpg" alt="logo" /></a>
+        <a href="#"><img class="logo" src="{{asset('backend/asset/image/logoptit.jpg')}}" alt="logo" /></a>
         <ul class="menu">
-          <li><a href="../webbay.html">Trang chủ</a></li>
-          <li><a href="intro.html">Giới thiệu</a></li>
-          <li><a href="#">Tra cứu</a></li>
+          <li><a href="#">Trang chủ</a></li>
+          <li><a href="{{route('intro')}}">Giới thiệu</a></li>
+          <li><a href="{{route('search')}}">Tra cứu</a></li>
           <li><a href="#">Lịch sử giao dịch</a></li>
-          <li><a href="login.html">Đăng Nhập</a></li>
-          <li><a href="signin.html">Đăng Kí</a></li>
-          <li><a href="support.html">Hướng dẫn thanh toán</a></li>
+          <li><a href="{{route('logout')}}">Thoát</a></li>
+          <li><a href="#">Hỗ trợ</a></li>
         </ul>
         <div class="clearfix"></div>
-        <div class="row">
-          <div class="heading-main-box">
-              <!-- <h1>
-                Đăng nhập
-              </h1> -->
-          </div>
       </div>
     </header>
-    <section class="login-section" style="background-image: url('path-to-your-background-image.jpg');">
-        <div class="login-container">
-          <h2>Quên mật khẩu</h2>
-          <form class="login-form">
-            <div class="input-group">
-              <label for="username">Số điện thoại/Email/Tên đăng nhập</label>
-              <input type="text" id="username" name="username" required>
-            </div>
-            <!-- <div class="input-group">
-              <label for="password">Mật khẩu</label>
-              <input type="password" id="password" name="password" required>
-            </div> -->
-            <!-- <div class="forgot-password">
-              <a href="#">Quên mật khẩu?</a>
-            </div> -->
-            <button type="submit">GỬi MÃ</button>
-          </form>
-          <!-- <div class="register-link">
-            <p>Chưa có tài khoản? <a href="#">Đăng ký</a></p>
-          </div> -->
-        </div>
-      </section>
     <section class="vietnam-airlines-section">
       <div class="section-wrapper">
         <div class="section-inner">

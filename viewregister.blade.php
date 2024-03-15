@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SEARCH</title>
+    <title>SIGNIN</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
@@ -14,49 +14,63 @@
       href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="../css/search.css" />
+    <link rel="stylesheet" type="text/css" href="{{asset('backend/asset/css/signin.css')}}" />
+    
+
   </head>
   <body>
     <header>
       <div class="navbar">
-        <a href="#"><img class="logo" src="../image/logoptit.jpg" alt="logo" /></a>
+        <a href="#"><img class="logo" src="{{asset('backend/asset/image/logoptit.jpg')}}" alt="logo" /></a>
         <ul class="menu">
-          <li><a href="../webbay.html">Trang chủ</a></li>
-          <li><a href="intro.html">Giới thiệu</a></li>
+          <li><a href="#">Trang chủ</a></li>
+          <li><a href="#">Giới thiệu</a></li>
           <li><a href="#">Tra cứu</a></li>
           <li><a href="#">Lịch sử giao dịch</a></li>
-          <li><a href="login.html">Đăng Nhập</a></li>
-          <li><a href="signin.html">Đăng Kí</a></li>
-          <li><a href="support.html">Hướng dẫn thanh toán</a></li>
+          <li><a href="{{route('show-form-login')}}">Đăng Nhập</a></li>
+          <li><a href="#">Đăng Kí</a></li>
+          <li><a href="#">Hỗ trợ</a></li>
         </ul>
         <div class="clearfix"></div>
         <div class="row">
           <div class="heading-main-box">
-              <h1>
-                Hướng dẫn thanh toán 
-              </h1>
+              <!-- <h1>
+                Đăng nhập
+              </h1> -->
           </div>
       </div>
     </header>
-    <section class="search-container">
-        <form>
-            <div class="search-field">
-                <label for="fromLocation">Điểm đi</label>
-                <input type="text" id="fromLocation" name="fromLocation" placeholder="Hà Nội (HAN)">
+    <section class="login-section" style="background-image: url('path-to-your-background-image.jpg');">
+        <div class="login-container">
+          <h2>Đăng Ký</h2>
+          <form class="login-form">
+            <div class="input-group">
+              <label for="username">Tên đăng nhập</label>
+              <input type="text" id="name" name="name" >
             </div>
-            <div class="search-field">
-                <label for="toLocation">Điểm đến</label>
-                <input type="text" id="toLocation" name="toLocation" placeholder="Hồ Chí Minh (SGN)">
+            <div class="input-group">
+              <label for="username">Địa chỉ Email</label>
+              <input type="text" id="email" name="email" required>
             </div>
-            <div class="search-field">
-                <label for="departureDate">Ngày đi</label>
-                <input type="date" id="departureDate" name="departureDate">
+            <div class="input-group">
+              <label for="password">Mật khẩu</label>
+              <input type="password" id="password" name="password" required>
             </div>
-            <div class="search-field">
-                <button type="submit">Tìm kiếm</button>
+            <!-- New Confirm Password Input -->
+            <div class="input-group">
+              <label for="confirm-password">Xác nhận mật khẩu</label>
+              <input type="password" id="confirm-password" name="confirm-password" required>
             </div>
-        </form>
-    </section>
+            <div class="forgot-password">
+              <!-- <a href="#">Quên mật khẩu?</a> -->
+            </div>
+            <button type="submit" >ĐĂNG KÝ</button>
+          </form>
+          <div class="register-link">
+            <!-- <p>Chưa có tài khoản? <a href="#">Đăng ký</a></p> -->
+          </div>
+        </div>
+      </section>
     <section class="vietnam-airlines-section">
       <div class="section-wrapper">
         <div class="section-inner">
@@ -107,5 +121,28 @@
     <footer>
       <p>Copyright &copy; 2024 by Vu Van Si</p>
     </footer>
+
+    <script src="{{asset('backend/asset/javascript/validator.js')}}"></script>
+    <script>
+      Validator({
+        form: '#form-1',
+        formGroupSelector: '.input-group',
+        errorSelector: '.form-message',
+        rules: [
+          Validator.isRequired('#fullname'),
+          Validator.isRequired('#email'),
+          Validator.isEmail('#email'),
+          Validator.minLength('#password',6,),
+          Validator.isRequired('#confirm-password'),
+          Validator.isConfirmed('#confirm-password',function(){
+            return document.querySelector('#form-1 #password').value;
+          },"Mật khẩu nhập lại không chính xác"),
+        ] ,
+        onSubmit: function(data){
+          console.log(data);
+        }
+      });
+    </script>
+
   </body>
 </html>
