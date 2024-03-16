@@ -53,7 +53,7 @@
 }
 .hero-text{
   height: 60% !important;
-    width:70% !important;
+    width:50% !important;
     margin: auto !important;
     display: flex;
     flex-direction: column;
@@ -64,13 +64,14 @@
 
 .hero-text p{
     color:white;
-    width: 100%;
+    width: 110%;
+    font-size: 18px;
 }
 .hero-title{
      /* padding-top:80px; */
      font-weight: 500;
     text-transform: uppercase;
-    font-size: 50px;
+    font-size: 60px;
     color:orange;
     
     text-align: center;
