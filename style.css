@@ -7,6 +7,7 @@
   /*Extra Large screens - Extra large desktops*/
   .header{
     
+<<<<<<< HEAD
   
   }
   html {
@@ -70,12 +71,76 @@
       color:white;
       width: 110%;
       font-size: 18px;
+=======
+  
+  }
+  
+  /* --HEADER--*/
+  .heeder-large-screen{
+    display: flex !important;
+    justify-content: space-evenly !important;
+    color:orange;
+    font-size: 18px !important;
+  
+  
+  }
+  #navDemo{
+    background-color: #000015;
+    
+  }
+  #navDemo a{
+    font-size: 13px !important;
+    color:orange;
+  }
+  .logo {
+      width: 100px;
+      margin-left: 60px;
+      margin-right: 30px;
+      margin-top: -10px;
+      margin-bottom: -10px;
+  }
+  
+  
+  .hero{
+      height: 1000px;
+      background-image: url("https://spaces.w3schools.com/images/HVYepJYeHdQ.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position:center;
+      background-color: #000015; 
+  
+      
+  }
+  .hero-description{
+      height: 950px;
+      background-color: rgba(0, 0, 21, .7);
+      display: flex;
+  }
+  .hero-text{
+    height: 60% !important;
+      width:70% !important;
+      margin: auto !important;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      
+  }
+  
+  
+  .hero-text p{
+      color:white;
+      width: 100%;
+>>>>>>> 6bf108605a0a926c07809d6ebcb80db7704f0885
   }
   .hero-title{
        /* padding-top:80px; */
        font-weight: 500;
       text-transform: uppercase;
+<<<<<<< HEAD
       font-size: 60px;
+=======
+      font-size: 50px;
+>>>>>>> 6bf108605a0a926c07809d6ebcb80db7704f0885
       color:orange;
       
       text-align: center;
