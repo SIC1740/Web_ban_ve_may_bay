@@ -1,121 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LOGIN</title>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
-      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900"
-      rel="stylesheet"
-    />
+    <title>Webbay</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- Bootstrap Datepicker JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<!-- Bootstrap Datepicker Vietnamese language -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.vi.min.js"></script>
+    
     <link rel="stylesheet" type="text/css" href="../css/login.css" />
-  </head>
-  <body>
-    <header>
-      <div class="navbar">
-        <a href="#"><img class="logo" src="../../image/logoptit.jpg" alt="logo" /></a>
-        <ul class="menu">
-          <li><a href="../webbay.html">Trang chủ</a></li>
-          <li><a href="intro.html">Giới thiệu</a></li>
-          <li><a href="#">Tra cứu</a></li>
-          <li><a href="#">Lịch sử giao dịch</a></li>
-          <li><a href="support.html">Hướng dẫn thanh toán</a></li>
-          <li class="contact-info">
-            <span class="phone-number">📞 0817 952 741</span>
-            <div class="admin-info">
-              <span class="admin-name">Admin</span>
-              <div class="admin-icon">👤</div>
-              </div>
-          </li>
-        </ul>
-        <div class="clearfix"></div>
-        <div class="row">
-          <div class="heading-main-box">
-              <!-- <h1>
-                Đăng nhập
-              </h1> -->
-          </div>
-      </div>
-    </header>
-    <section class="login-section" style="background-image: url('path-to-your-background-image.jpg');">
-        <div class="login-container">
-          <h2>Đăng Nhập</h2>
-          <form class="login-form" id="#form-1">
-            <div class="input-group">
-              <label for="username">Số điện thoại/Email/Tên đăng nhập</label>
-              <input type="text" id="username" name="username" required>
-              <span>Vui lòng nhập email</span>
+</head>
+<body>
+<header style="position: relative">
+    <div class="w3-top" id="home">
+        <div class="w3-bar  w3-card w3-left-align w3-large heeder-large-screen" style="background-color: #000015">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-black" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-hover-black"><img class="logo" src="../image/logoptit.jpg" alt="logo" /></a>
+            <div>
+                <a href="#Home" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black">Trang chủ</a>
+                <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black">Giới thiệu</a>
+                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black">Tra cứu</a>
+                <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black">Lịch sử giao dịch</a>
+                <a href="login.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black">Đăng Nhập</a>
+                <a href="signin.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black">Đăng Kí</a>
+                <a href="support.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black">Hướng dẫn thanh toán</a>
             </div>
-            <div class="input-group">
-              <label for="password">Mật khẩu</label>
-              <input type="password" id="password" name="password" required>
-              <span>Mật khẩu phải có ít nhất 6 chữ số</span>
-            </div>
-            <div class="forgot-password">
-              <a href="#">Quên mật khẩu?</a>
-            </div>
-            <button type="submit">ĐĂNG NHẬP</button>
-          </form>
-          <div class="register-link">
-            <p>Chưa có tài khoản? <a href="#">Đăng ký</a></p>
-          </div>
         </div>
-      </section>
-    <section class="vietnam-airlines-section">
-      <div class="section-wrapper">
-        <div class="section-inner">
-          <div class="content-wrapper">
-            <div class="content-inner">
-              <div class="image-wrapper">
-                <div class="image-inner">
-                  <img
-                    src="https://www.vietnamairlines.com/~/media/Images/VNANew/Footer/4-Star_Metallic_150x150.png?la=vi-VN"
-                    alt="Vietnam Airlines is proud to be a leading 4-star global airline"
-                  />
-                </div>
-                <div class="text-content">
-                  <h4>
-                    PTIT Airlines tự hào là Hãng hàng không quốc tế 4 sao
-                  </h4>
-                  <p>PTIT Airlines là nơi thắp cánh ước mơ cho bao thế hệ sinh viên PTIT.</p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div id="navDemo" class="w3-bar-block w3-hide w3-hide-medium w3-hide-large w3-large">
+            <a href="#Home" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Trang chủ</a>
+            <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Giới thiệu</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Tra cứu</a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Lịch sử giao dịch</a>
+            <a href="login.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Đăng Nhập</a>
+            <a href="signin.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Đăng Kí</a>
+            <a href="support.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Hướng dẫn thanh toán</a>
         </div>
+    </div>
+</header>
+<section class="login-section" style="background-image: url('path-to-your-background-image.jpg');">
+  <div class="login-container">
+    <h2>Đăng Nhập</h2>
+    <form class="login-form" id="form-2">
+      <div class="input-group">
+        <label for="email">Email</label>
+          <input type="text" class="form-control" id="email" name="email" placeholder="VD: sivu@gmail.com" >
+        <span class="form-message"></span>
       </div>
-    </section>
-    <section class="contact-section">
-      <div class="row">
-        <div class="col span-1-of-3">
-          <ul class="information">
-            <li>
-              <i class="fas fa-map-marker-alt small-icon"></i>Address: Km10,
-              Đường Nguyễn Trãi, Q.Hà Đông, Hà Nội
-            </li>
-            <li>
-              <i class="fas fa-envelope small-icon"></i>Email:
-              SiVV.B21VT378@stu.ptit.edu.vn
-            </li>
-            <li><i class="fas fa-phone small-icon"></i>SĐT: (+84)0817952741</li>
-          </ul>
-          <ul class="social-icons">
-            <li><i class="fab fa-facebook"></i></li>
-            <li><i class="fab fa-twitter-square"></i></li>
-            <li><i class="fab fa-instagram"></i></li>
-            <li><i class="fab fa-google-plus-square"></i></li>
-          </ul>
-        </div>
+      <div class="input-group">
+        <label for="password">Mật khẩu</label>
+          <input type="password" class="form-control" id="password" name="password" >
+        <span class="form-message"></span>
       </div>
-    </section>
-    <footer>
-      <p>Copyright &copy; 2024 by Vu Van Si</p>
-    </footer>
-  </body>
+      <div class="forgot-password">
+        <a href="#">Quên mật khẩu?</a>
+      </div>
+      <button type="submit">ĐĂNG NHẬP</button>
+    </form>
+    <div class="register-link">
+      <p>Chưa có tài khoản? <a href="#">Đăng ký</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section">
+<div class="row">
+  <div class="col span-1-of-3">
+    <ul class="information">
+      <li>
+        <i class="fas fa-map-marker-alt small-icon"></i>Address: Km10,
+        Đường Nguyễn Trãi, Q.Hà Đông, Hà Nội
+      </li>
+      <li>
+        <i class="fas fa-envelope small-icon"></i>Email:
+        SiVV.B21VT378@stu.ptit.edu.vn
+      </li>
+      <li><i class="fas fa-phone small-icon"></i>SĐT: (+84)0817952741</li>
+    </ul>
+    <ul class="social-icons">
+      <li><i class="fab fa-facebook"></i></li>
+      <li><i class="fab fa-twitter-square"></i></li>
+      <li><i class="fab fa-instagram"></i></li>
+      <li><i class="fab fa-google-plus-square"></i></li>
+    </ul>
+  </div>
+</div>
+</section>
+<footer>
+<p>Copyright &copy; 2024 by Vu Van Si</p>
+</footer>
+<script>
+  // Used to toggle the menu on small screens when clicking on the menu button
+  function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+  </script>
+      <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+              e.preventDefault(); 
+              var target = document.querySelector(this.getAttribute('href'));
+              if(target) {
+                target.scrollIntoView({
+                  behavior: 'smooth', 
+                  block: 'start' 
+                });
+              }
+            });
+          });
+        });
+      </script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+  const loginForm = document.getElementById('form-2');
+  
+  loginForm.addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent form submission to validate first
+    
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const emailMessage = emailInput.nextElementSibling;
+    const passwordMessage = passwordInput.nextElementSibling;
+    
+    let isValid = true;
+    
+    // Validate Email
+    if (!validateEmail(emailInput.value)) {
+      emailMessage.textContent = 'Email không hợp lệ. Ví dụ: sivu@gmail.com';
+      isValid = false;
+    } else {
+      emailMessage.textContent = '';
+    }
+    
+    // Validate Password
+    if (!validatePassword(passwordInput.value)) {
+      passwordMessage.textContent = 'Mật khẩu phải chứa cả chữ và số.';
+      isValid = false;
+    } else {
+      passwordMessage.textContent = '';
+    }
+    
+    // If all validations pass, submit the form
+    if (isValid) {
+      // You might want to actually submit the form here.
+      // loginForm.submit();
+      console.log('Form is valid and can be submitted.');
+    }
+  });
+  
+  function validateEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  }
+  
+  function validatePassword(password) {
+    const hasLetter = /[a-zA-Z]/.test(password);
+    const hasNumber = /\d/.test(password);
+    return hasLetter && hasNumber;
+  }
+});
+
+      </script>
+      
+</body>
 </html>
