@@ -56,7 +56,7 @@
     <form class="login-form" id="form-2">
       <div class="input-group">
         <label for="email">Email</label>
-          <input type="text" class="form-control" id="email" name="email" placeholder="VD: sivu@gmail.com" >
+          <input type="email" class="form-control" id="email" name="email" placeholder="VD: sivu@gmail.com" >
         <span class="form-message"></span>
       </div>
       <div class="input-group">
@@ -102,100 +102,67 @@
 <p>Copyright &copy; 2024 by Vu Van Si</p>
 </footer>
 <script>
-  // Used to toggle the menu on small screens when clicking on the menu button
-  function myFunction() {
+function myFunction() {
     var x = document.getElementById("navDemo");
     if (x.className.indexOf("w3-show") == -1) {
-      x.className += " w3-show";
+        x.className += " w3-show";
     } else { 
-      x.className = x.className.replace(" w3-show", "");
+        x.className = x.className.replace(" w3-show", "");
     }
-  }
+}
+
   </script>
-  <script>
-    // Tabs
-    function openLink(evt, linkName) {
-      var i, x, tablinks;
-      x = document.getElementsByClassName("myLink");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablink");
-      for (i = 0; i < x.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
-      }
-      document.getElementById(linkName).style.display = "block";
-      evt.currentTarget.className += " w3-red";
-    }
-    0
-    // Click on the first tablink on load
-    document.getElementsByClassName("tablink")[0].click();
-    </script>
       <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-              e.preventDefault(); 
-              var target = document.querySelector(this.getAttribute('href'));
-              if(target) {
-                target.scrollIntoView({
-                  behavior: 'smooth', 
-                  block: 'start' 
-                });
-              }
-            });
-          });
-        });
-      </script>
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-  const loginForm = document.getElementById('form-2');
-  
-  loginForm.addEventListener('submit', function(e) {
-    e.preventDefault(); // Prevent form submission to validate first
+document.addEventListener('DOMContentLoaded', function() {
+    const loginForm = document.getElementById('form-2');
     
-    const emailInput = document.getElementById('email');
-    const passwordInput = document.getElementById('password');
-    const emailMessage = emailInput.nextElementSibling;
-    const passwordMessage = passwordInput.nextElementSibling;
+    loginForm.addEventListener('submit', function(e) {
+        e.preventDefault(); // Prevent form submission
+
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+
+        // Ensure elements and their next siblings exist before attempting to access them
+        const emailMessage = emailInput ? emailInput.nextElementSibling : null;
+        const passwordMessage = passwordInput ? passwordInput.nextElementSibling : null;
+        
+        let isValid = true;
+        
+        // Validate Email
+        if (emailInput && !validateEmail(emailInput.value)) {
+            if (emailMessage) emailMessage.textContent = 'Email không hợp lệ. Ví dụ: sivu@gmail.com';
+            isValid = false;
+        } else {
+            if (emailMessage) emailMessage.textContent = '';
+        }
+        
+        // Validate Password
+        if (passwordInput && !validatePassword(passwordInput.value)) {
+            if (passwordMessage) passwordMessage.textContent = 'Mật khẩu phải chứa cả chữ và số.';
+            isValid = false;
+        } else {
+            if (passwordMessage) passwordMessage.textContent = '';
+        }
+        
+        // If all validations pass, consider the form as ready to be submitted
+        if (isValid) {
+            console.log('Mẫu đơn hợp lệ và có thể được gửi.');
+        }
+    });
     
-    let isValid = true;
-    
-    // Validate Email
-    if (!validateEmail(emailInput.value)) {
-      emailMessage.textContent = 'Email không hợp lệ. Ví dụ: sivu@gmail.com';
-      isValid = false;
-    } else {
-      emailMessage.textContent = '';
+    function validateEmail(email) {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
     }
     
-    // Validate Password
-    if (!validatePassword(passwordInput.value)) {
-      passwordMessage.textContent = 'Mật khẩu phải chứa cả chữ và số.';
-      isValid = false;
-    } else {
-      passwordMessage.textContent = '';
+    function validatePassword(password) {
+        const hasLetter = /[a-zA-Z]/.test(password);
+        const hasNumber = /\d/.test(password);
+        return hasLetter && hasNumber;
     }
-    
-    // If all validations pass, submit the form
-    if (isValid) {
-      // You might want to actually submit the form here.
-      // loginForm.submit();
-      console.log('Form is valid and can be submitted.');
-    }
-  });
-  
-  function validateEmail(email) {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-  }
-  
-  function validatePassword(password) {
-    const hasLetter = /[a-zA-Z]/.test(password);
-    const hasNumber = /\d/.test(password);
-    return hasLetter && hasNumber;
-  }
 });
+
+
 
       </script>
       

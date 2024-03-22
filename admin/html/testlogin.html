@@ -21,7 +21,7 @@
 <!-- Bootstrap Datepicker Vietnamese language -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.vi.min.js"></script>
     
-    <link rel="stylesheet" type="text/css" href="../css/support.css" />
+    <link rel="stylesheet" type="text/css" href="../css/misspassword.css" />
 </head>
 <body>
 <header style="position: relative">
@@ -50,99 +50,21 @@
         </div>
     </div>
 </header>
-<section class="payment-instructions-banner">
-  <h1>Hướng dẫn thanh toán</h1>
-</section>
+<section class="login-section" style="background-image: url('path-to-your-background-image.jpg');">
 
-<section id = "paymentOptions">
-  <div class="container my-3" >
-    <div class="row" id="paymentAccordion" >
-      <!-- Payment methods -->
-      <div class="col-lg-6">
-        <div class="list-group">
-          <a class="list-group-item list-group-item-action" data-bs-toggle="collapse" href="#bankDetails" role="button" aria-expanded="false" aria-controls="bankDetails">
-            Chuyển khoản ngân hàng
-          </a>
-          <a class="list-group-item list-group-item-action" data-bs-toggle="collapse" href="#officePayment" role="button" aria-expanded="false" aria-controls="officePayment">
-            Thanh toán tại văn phòng
-          </a>
-           <a class="list-group-item list-group-item-action" data-bs-toggle="collapse" href="#homePayment" role="button" aria-expanded="false" aria-controls="homePayment">
-        Thanh toán tại nhà quý khách
-      </a>
-        </div>
+  <div class="login-container">
+    <h2>Gõ thông tin dưới đây để đặt lại mật khẩu</h2>
+    <form class="login-form" id="form-2" action="YOUR_SERVE_SIDE_CODE" method="POST">
+      <div class="input-group">
+        <label for="email"> Địa chỉ Email</label>
+          <input type="text" class="form-control" id="email" name="email" placeholder="VD: sivu@gmail.com" >
+        <span class="form-message"></span>
       </div>
-      <!-- Collapsible bank account details -->
-      <div class="col-lg-6">
-        <div class="collapse" id="bankDetails"  data-bs-parent="#paymentAccordion">
-          <!-- Agribank -->
-          <div class="card mb-3">
-            <div class="card-body">
-              <img src="https://www.elines.vn/static/payment3.png" class="float-start me-3" alt="Agribank logo" style="width:60px;">
-              <h6 class="card-title">Ngân Hàng TMCP Kỹ thương Việt Nam - Techcombank</h6>
-              <p class="card-text">Tên tài khoản: Công ty Cổ phần PTIT Airlines<br>
-                Số tài khoản: 8686 3103 2003br>
-                Chi Nhánh:  Thủ Đô
-              </p>
-            </div>
-          </div>
-          <!-- MBBank -->
-          <div class="card mb-3">
-            <div class="card-body">
-              <img src="https://www.elines.vn/static/payment7.png" class="float-start me-3" alt="MBBank logo" style="width:60px;">
-              <h6 class="card-title">Ngân hàng TMCP Ngoại Thương Việt Nam - Vietcombank</h6>
-              <p class="card-text">Tên tài khoản: Công ty Cổ phần PTIT Airlines<br>
-                Số tài khoản: 0761 1002 58006<br>
-                Chi Nhánh:  Hà Nội
-              </p>
-            </div>
-          </div>
-          <!-- ACB -->
-          <div class="card">
-            <div class="card-body">
-              <img src="https://www.elines.vn/static/payment8.png" class="float-start me-3" alt="ACB logo" style="width:60px;">
-              <h6 class="card-title">Ngân hàng TMCP Đầu tư và phát triển Việt Nam - BIDV</h6>
-              <p class="card-text">Tên tài khoản: Công ty Cổ phần PTIT Airlines<br>
-                Số tài khoản: 152867789
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="collapse" id="officePayment"  data-bs-parent="#paymentAccordion">
-          <div class="card card-body">
-            <p>Sau khi đặt hàng thành công, Quý khách vui lòng qua văn phòng PTIT Airlines để thanh toán và nhận vé.</p>
-            <ul>
-              <li>Thời gian giao dịch: Từ 8h sáng tới 20h30 hàng ngày</li>
-              <li>Phí giao dịch: Miễn phí</li>
-            </ul>
-            <hr>
-            <p>Vui lòng chọn đúng văn phòng gần địa chỉ nhà của Quý khách</p>
-            <h5>VĂN PHÒNG PTIT AIRLINES TẠI HÀ NỘI</h5>
-            <p>Địa chỉ: Km10, Đường Nguyễn Trãi, Q.Hà Đông, Hà Nội</p>
-            <h5>VĂN PHÒNG PTIT AIRLINES TẠI TP.HỒ CHÍ MINH</h5>
-            <p>Địa chỉ: 11 Nguyễn Đình Chiểu, Phường Đa Kao, Quận 1, TP.Hồ Chí Minh</p>
-            <hr>
-          </div>
-        </div>
-      </div>
-      <div class="collapse" id="homePayment"  data-bs-parent="#paymentAccordion">
-      <div class="card card-body">
-        <strong>Nhân viên PTIT AIRLINES sẽ giao vé và thu tiền tại địa chỉ khách hàng cung cấp</strong>
-        <ul>
-          <li>Thời gian giao dịch: Trong giờ hành chính</li>
-          <li>Phí giao dịch:
-            <ul>
-              <li>Dưới 7Km tính từ văn phòng PTIT ARILINES: 20.000 (Vnd)</li>
-              <li>Trên 7Km tính từ văn phòng PTIT ARILINES: 50.000 (Vnd)</li>
-            </ul>
-          </li>
-        </ul>
-        <hr>
-        <p>Quý khách vui lòng điền đầy đủ thông tin địa chỉ để nhân viên PTIT AIRLINES giao vé và thu tiền.</p>
-        <p><strong>Quý khách lưu ý:</strong> Hình thức thanh toán này chỉ áp dụng cho các địa chỉ tại khu vực nội thành Hà Nội và Tp Hồ Chí Minh. Khu vực ngoại thành hoặc ngoài giờ hành chính mức phí theo thỏa thuận.</p>
-        <hr>
-      </div>
-    </div>
+      <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+      <button type="submit" class="btn btn-primary mt-3">TIẾP TỤC</button>
+    </form>
+    <div class="register-link">
+      <p>Quay về trang <a href="#">Đăng nhập</a></p>
     </div>
   </div>
 </section>
@@ -173,6 +95,7 @@
 <footer>
 <p>Copyright &copy; 2024 by Vu Van Si</p>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
   // Used to toggle the menu on small screens when clicking on the menu button
   function myFunction() {
