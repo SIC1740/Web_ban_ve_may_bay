@@ -104,7 +104,8 @@
     
     /* CSS for the flight-management-section */
     .flight-management-section {
-        margin: 20px auto;
+        margin-top: 100px;
+        margin: 100px auto;
         border: 1px solid #dee2e6;
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
