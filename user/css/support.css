@@ -1,0 +1,307 @@
+/*CSS variables section*/
+:root {
+  background-color: rgba(0, 0, 21, 1);
+  
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+
+/* --HEADER--*/
+.heeder-large-screen{
+  display: flex !important;
+  justify-content: space-evenly !important;
+  color:orange;
+  font-size: 18px !important;
+
+
+}
+#navDemo{
+  background-color: #000015;
+  
+}
+#navDemo a{
+  font-size: 13px !important;
+  color:orange;
+}
+.logo {
+    width: 100px;
+    margin-left: 60px;
+    margin-right: 30px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+.payment-instructions-banner {
+  background: rgba(0, 0, 0, 0) url("https://www.elines.vn/static/step-header-bg.jpg") no-repeat scroll 50% 50% / cover padding-box border-box;
+  color: black; /* Sets the text color to black */
+  margin-top: 90px;
+  margin-bottom: 1px;
+  text-align: center;
+  padding: 50px 0; /* Adjust the padding to match the height you desire */
+}
+
+.payment-instructions-banner h1 {
+  font-size: 2em; /* Adjust size as needed */
+  font-weight: 300; /* This is usually for lighter font-weight, adjust as per your font */
+  margin: 0;
+  padding: 0;
+  /* Remove text-shadow if it's not needed for black text */
+}
+
+/* --login--  */
+/* Login Section Styles */
+/* Base Styles */
+/* Base Styles */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Section Styling */
+#paymentOptions {
+  margin-top: 100px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Container Adjustments */
+#paymentOptions .container {
+  padding: 20px;
+}
+
+/* List Group Enhancements */
+#paymentOptions .list-group-item {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  margin-bottom: 10px;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+#paymentOptions .list-group-item:hover {
+  background-color: #0056b3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Styling */
+#paymentOptions .card {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  border: none;
+  margin-bottom: 20px;
+  transition: transform 0.2s;
+}
+
+#paymentOptions .card:hover {
+  transform: translateY(-5px);
+}
+
+#paymentOptions .card-body {
+  display: flex;
+  align-items: center;
+}
+
+#paymentOptions .card-title {
+  color: #007bff;
+}
+
+#paymentOptions .card-text {
+  margin-left: 12px;
+}
+
+/* Adjusting Image Styles for Non-Circular Appearance */
+#paymentOptions .card img {
+  /* Remove border-radius for square images */
+  margin-right: 15px;
+  width: 60px; /* Adjust size as needed */
+  /* Remove border property if you don't want a border */
+}
+
+/* Collapsible Content Animation */
+#paymentOptions .collapse:not(.show) {
+  display: none;
+}
+
+#paymentOptions .collapse.show {
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Additional Styling for Lists */
+#paymentOptions ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#paymentOptions ul li {
+  padding-left: 20px;
+  position: relative;
+}
+
+#paymentOptions ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  height: 6px;
+  width: 6px;
+  background-color: #007bff;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+/* --CONTACT-- */
+.contact-section{
+    background-image: linear-gradient(45deg,rgba(2,33,64, 0.8) 55%,rgba(45,95,93,0.85)),url('../image/anh5.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.information{
+    list-style: none;
+    color: white;
+    line-height: 200%;
+    margin-top: 70px;
+    word-spacing: 1px;
+    font-size: 20px;
+}
+
+.information .small-icon{
+    color: #427db4;
+    font-size: 20px;
+}
+
+.information .small-icon:hover,
+.information .small-icon:active{
+    transform: scale(1.3);
+}
+
+.social-icons{
+    margin-top: 30px;
+    list-style: none;
+}
+
+.social-icons li{
+    display: inline-block;
+    font-size: 30px;
+    margin-left: 20px;
+    color: white;
+}
+
+.social-icons li i{
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.social-icons li i:hover,
+.social-icons li i:active{
+    transform: scale(1.3);
+    color: #e67e22;
+}
+/* --FOOTER-- */
+footer{
+    text-align: center;
+    background-color: #494949;
+    color: white;
+    padding: 20px;
+    font-size: 15px;
+}
+html {
+    scroll-behavior: smooth;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  @media screen and (max-width: 1500px) {
+    .search .w3-display-middle {
+        width: 50%; /* Adjust width for better display on large screens */
+    }
+
+    .search .w3-row-padding, .search .w3-half {
+        padding: 8px; /* Adjust padding for spacing */
+    }
+    .hero{
+        height: 550px !important;;
+        background-image: url("https://spaces.w3schools.com/images/HVYepJYeHdQ_1200_600.jpg");
+    }
+    .hero-description{
+        height: 550px
+    }
+    .hero-title{
+        font-size:50px;
+    }
+
+}
+
+/*medium screens - Laptops*/
+@media screen and (max-width: 1024px) {
+    main{
+        width:100% !important;
+        margin: auto !important;
+    }
+
+    .vietnam-airlines-section .content-wrapper,
+    .contact-section .col {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .vietnam-airlines-section .image-inner img,
+    .contact-section .information li,
+    .contact-section .social-icons li {
+        margin: auto;
+        max-width: 80%; /* Adjust image sizes and text alignment for better mobile readability */
+    }
+
+    .contact-section .social-icons i {
+        font-size: 20px; /* Adjust social icon size for better visibility */
+    }
+}
+
+/*Small screens - tablets*/
+@media screen and (max-width: 768px) {
+    .vietnam-airlines-section,
+    .contact-section {
+        padding: 15px 10px; /* Adjust padding for tighter screen space */
+    }
+
+    .vietnam-airlines-section .text-content h4,
+    .contact-section .information,
+    .contact-section .social-icons {
+        font-size: 14px; /* Adjust font size for readability on smaller devices */
+    }
+    
+}
+
+/*Extra small screens - phones*/
+@media screen and (max-width: 480px) {
+
+    .vietnam-airlines-section .text-content,
+    .contact-section .col {
+        padding: 10px 5px; /* Reduce padding to fit small screens better */
+    }
+
+    .vietnam-airlines-section .text-content p,
+    .contact-section .information li,
+    .contact-section .social-icons li {
+        font-size: 12px; /* Further reduce font size for very small screens */
+    }
+
+    .contact-section .social-icons i {
+        margin: 0 5px; /* Reduce margin between social icons for space efficiency */
+    }
+}

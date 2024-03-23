@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Webbay</title>
+    <title>Home</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -21,7 +21,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.vi.min.js"></script>
     
 
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="home.css" />
 
 
 </head>
@@ -35,46 +35,132 @@
 
                 <a href="#Home" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black">Trang chủ</a>
                 <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black">Giới thiệu</a>
-                <a href="signin.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black">Đăng Kí</a>
                 <a href="support.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-black">Hướng dẫn thanh toán</a>
+                <div class="w3-bar-item w3-padding-large" style="float: right;">
+                  <div style="margin-right: 20px;">
+                    <a href="tel:19001250" class="phone-number" style="text-decoration: none; color: #fff;">
+                      <i class="fas fa-phone"></i>
+                      1900 1250
+                    </a>
+                    <!-- User Dropdown Menu Start -->
+                    <div class="dropdown">
+                      <a class="dropdown-toggle user-info" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none; color: #fff; display: flex; align-items: center;">
+                        <i class="fas fa-user-circle" style="margin-right: 5px;"></i>
+                        Vũ Văn Sĩ
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="right: 0; left: auto;">
+                        <li><a class="dropdown-item" href="#"><i class="fas fa-user"></i> Đăng xuất</a></li>
+                      </ul>
+                    </div>
+                    <!-- User Dropdown Menu End -->
+                  </div>
+                </div>
             </div>
         </div>
         <div id="navDemo" class="w3-bar-block w3-hide w3-hide-medium w3-hide-large w3-large">
 
             <a href="#Home" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Trang chủ</a>
             <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Giới thiệu</a>
-            <a href="login.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Đăng Nhập</a>
-            <a href="signin.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Đăng Kí</a>
             <a href="support.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Hướng dẫn thanh toán</a>
+            <div class="w3-bar-item w3-padding-large" style="float: right;">
+              <div style="margin-right: 20px;">
+                <a href="tel:19001250" class="phone-number" style="text-decoration: none; color: #fff;">
+                  <i class="fas fa-phone"></i>
+                  1900 1250
+                </a>
+                <!-- User Dropdown Menu Start -->
+                <div class="dropdown">
+                  <a class="dropdown-toggle user-info" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none; color: #fff; display: flex; align-items: center;">
+                    <i class="fas fa-user-circle" style="margin-right: 5px;"></i>
+                    Vũ Văn Sĩ
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="right: 0; left: auto;">
+                    <li><a class="dropdown-item" href="#"><i class="fas fa-user"></i> Đăng xuất</a></li>
+                  </ul>
+                </div>
+                <!-- User Dropdown Menu End -->
+              </div>
+            </div>
         </div>
     </div>
 </header>
 
-<section class="login-section" style="background-image: url('path-to-your-background-image.jpg');">
-  <div class="login-container">
-    <h2>Đăng Nhập</h2>
-    <form class="login-form" id="form-2">
-      <div class="input-group">
-        <label for="email">Email</label>
-          <input type="email" class="form-control" id="email" name="email" placeholder="VD: sivu@gmail.com" >
-        <span class="form-message"></span>
-      </div>
-      <div class="input-group">
-        <label for="password">Mật khẩu</label>
-          <input type="password" class="form-control" id="password" name="password" >
-        <span class="form-message"></span>
-      </div>
-      <div class="forgot-password">
-        <a href="#">Quên mật khẩu?</a>
-      </div>
-      <button type="submit">ĐĂNG NHẬP</button>
-    </form>
-    <div class="register-link">
-      <p>Chưa có tài khoản? <a href="#">Đăng ký</a></p>
+<section class="w3-display-container w3-content w3-hide-small search" style="max-width:2500px" id = "Home">
+
+  <img class="w3-image" src="https://www.w3schools.com/w3images/london2.jpg" alt="London" style="width:100%; height:auto;">
+  <div class="w3-display-middle" style="width:60%">
+    <div class="w3-bar w3-black">
+      <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Flight');"><i class="fa fa-plane w3-margin-right"></i>Flight</button>
     </div>
+
+    <!-- Tabs -->
+    <div id="Flight" class="w3-container w3-white w3-padding-16 myLink">
+      <h3>Website đặt vé máy bay tốt nhất dành cho <br>
+      sinh viên PTIT</h3>
+      <div class="w3-row-padding" style="margin:0 -16px;">
+        <div class="w3-half origin-location">
+          <label>Điểm đi</label>
+
+
+          <input class="w3-input w3-border form-control dropdown-toggle" type="text" data-bs-toggle = "dropdown" placeholder="Hà Nội" aria-label="Tìm thành phố1">
+
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="#">Hà Nội</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Tp Hồ Chí Minh</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Đà Nẵng</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Nha Trang</a>
+            </li>
+          </ul>
+          <button class="btn btn-outline-secondary" type="button" id="dropdownMenuButton">
+            <i class="bi bi-chevron-down"></i>
+          </button>
+        </div>
+        <div class="w3-half destination-location">
+          <label>Điểm đến</label>
+          <input class="w3-input w3-border form-control dropdown-toggle" type="text" data-bs-toggle="dropdown" placeholder="Tp Hồ Chí Minh" aria-label="Tìm thành phố">
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="#">Hà Nội</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Tp Hồ Chí Minh</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Đà Nẵng</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Nha Trang</a>
+            </li>
+          </ul>
+          <button class="btn btn-outline-secondary" type="button" id="dropdownMenuButton">
+            <i class="bi bi-chevron-down"></i>
+          </button>
+        </div>
+        <div class="w3-half">
+          <label for="departure-date" class="form-label">Ngày xuất phát</label>
+          <div class="input-group date" id="datepicker">
+            <input type="text" class="form-control" id="departure-date" placeholder="Chọn ngày xuất phát">
+            <span class="input-group-append">
+              <span class="input-group-text bg-white d-block">
+                <i class="bi bi-calendar3"></i>
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+      <p><button class="w3-button w3-dark-grey">Tìm kiếm</button></p>
+    </div>
+
   </div>
 </section>
-<section  class="intro">
+<section >
   <div class="hero" id="about">
     <div class="hero-description">
       <div class="hero-text">
@@ -225,62 +311,9 @@
     });
   });
 </script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-      const loginForm = document.getElementById('form-2');
-      
-      loginForm.addEventListener('submit', function(e) {
-          e.preventDefault(); // Prevent form submission
-  
-          const emailInput = document.getElementById('email');
-          const passwordInput = document.getElementById('password');
-  
-          // Ensure elements and their next siblings exist before attempting to access them
-          const emailMessage = emailInput ? emailInput.nextElementSibling : null;
-          const passwordMessage = passwordInput ? passwordInput.nextElementSibling : null;
-          
-          let isValid = true;
-          
-          // Validate Email
-          if (emailInput && !validateEmail(emailInput.value)) {
-              if (emailMessage) emailMessage.textContent = 'Email không hợp lệ. Ví dụ: sivu@gmail.com';
-              isValid = false;
-          } else {
-              if (emailMessage) emailMessage.textContent = '';
-          }
-          
-          // Validate Password
-          if (passwordInput && !validatePassword(passwordInput.value)) {
-              if (passwordMessage) passwordMessage.textContent = 'Mật khẩu phải chứa cả chữ và số.';
-              isValid = false;
-          } else {
-              if (passwordMessage) passwordMessage.textContent = '';
-          }
-          
-          // If all validations pass, consider the form as ready to be submitted
-          if (isValid) {
-              console.log('Mẫu đơn hợp lệ và có thể được gửi.');
-          }
-      });
-      
-      function validateEmail(email) {
-          const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          return regex.test(email);
-      }
-      
-      function validatePassword(password) {
-          const hasLetter = /[a-zA-Z]/.test(password);
-          const hasNumber = /\d/.test(password);
-          return hasLetter && hasNumber;
-      }
-  });
-  
-  
-  
-        </script>
+
  
      
 </body>
 </html>
-
 

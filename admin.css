@@ -78,6 +78,117 @@
         color: #495057;
         border-bottom: 3px solid #007bff;
     }
+    .w3-bar {
+        position: relative;
+        z-index: 10; /* Ensure the navbar is above other content */
+      }
+    /* Styles for the header user section */
+.header-user-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .phone-number {
+    color: #ffffff;
+    background-color: #007bff;
+    border-radius: 15px;
+    padding: 5px 15px;
+    margin-right: 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .phone-number:hover,
+  .phone-number:focus {
+    background-color: #0056b3;
+    text-decoration: none;
+    color: #ffffff;
+  }
+  .dropdown{
+    position: relative;
+  }
+  .user-dropdown {
+    position: relative;
+  }
+  .dropdown-toggle{
+    cursor: pointer;
+  }
+  .user-dropdown .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    color: #007bff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 1rem;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .user-dropdown .dropdown-toggle:hover,
+  .user-dropdown .dropdown-toggle:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    z-index: 1000;
+    display: block;
+    top: 100%;
+    right: 0;
+    z-index: 1000;
+    display: none;
+    min-width: 200px;
+    padding: 5px 0;
+    margin: 5px 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #ffffff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .dropdown-item:hover,
+  .dropdown-item:focus {
+    color: #ffffff;
+    background-color: #007bff;
+  }
+  
+  /* Adjust font awesome icons */
+  .fa-user-circle, .fa-phone {
+    margin-right: 8px;
+  }
+  
+  .fa-envelope, .fa-sign-out-alt {
+    margin-right: 5px;
+  }
+  .your-content-class {
+    overflow: visible; /* Ensure it doesn't clip any child elements */
+  }
+  
+  /* Additional responsive tweaks can be added here if needed */
+  
     
     h2 {
         color: #495057;
@@ -104,6 +215,8 @@
     
     /* CSS for the flight-management-section */
     .flight-management-section {
+        position: relative;
+        z-index: 1;
         margin-top: 100px;
         margin: 100px auto;
         border: 1px solid #dee2e6;
@@ -146,7 +259,44 @@
         background-color: #f8f9fa;
         border-color: #dee2e6 #dee2e6 transparent;
     }
-    
+    .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table thead {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.table th,
+.table td {
+    text-align: left;
+    padding: 12px 15px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.table th {
+    font-weight: bold;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table tbody tr:hover {
+    background-color: #ddd;
+    cursor: default;
+}
+
     
 
     /* --CONTACT-- */

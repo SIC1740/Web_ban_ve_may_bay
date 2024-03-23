@@ -38,16 +38,23 @@
             </div>
             <div class="w3-bar-item w3-padding-large" style="float: right;">
                 <div style="margin-right: 20px;">
-                    <a href="tel:19001250" class="phone-number" style="text-decoration: none; color: #fff;">
-                        <i class="fas fa-phone"></i>
-                        0817952741
+                  <a href="tel:19001250" class="phone-number" style="text-decoration: none; color: #fff;">
+                    <i class="fas fa-phone"></i>
+                    1900 1250
+                  </a>
+                  <!-- User Dropdown Menu Start -->
+                  <div class="dropdown">
+                    <a class="dropdown-toggle user-info" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none; color: #fff; display: flex; align-items: center;">
+                      <i class="fas fa-user-circle" style="margin-right: 5px;"></i>
+                      Manager
                     </a>
-                    <div class="user-info" style="display: flex; align-items: center;">
-                        <i class="fas fa-user-circle" style="margin-right: 5px;"></i>
-                        Manager
-                    </div>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="right: 0; left: auto;">
+                      <li><a class="dropdown-item" href="#"><i class="fas fa-user"></i> Đăng xuất</a></li>
+                    </ul>
+                  </div>
+                  <!-- User Dropdown Menu End -->
                 </div>
-            </div>
+              </div>
         </div>
         <div id="navDemo" class="w3-bar-block w3-hide w3-hide-medium w3-hide-large w3-large">
 
@@ -57,16 +64,24 @@
             <a href="support.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">Hướng dẫn thanh toán</a>
             <div class="w3-bar-item w3-padding-large" style="float: right;">
                 <div style="margin-right: 20px;">
-                    <a href="tel:19001250" class="phone-number" style="text-decoration: none; color: #fff;">
-                        <i class="fas fa-phone"></i>
-                        1900 1250
+                  <a href="tel:19001250" class="phone-number" style="text-decoration: none; color: #fff;">
+                    <i class="fas fa-phone"></i>
+                    1900 1250
+                  </a>
+                  <!-- User Dropdown Menu Start -->
+                  <div class="dropdown">
+                    <a class="dropdown-toggle user-info" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" style="text-decoration: none; color: #fff; display: flex; align-items: center;">
+                      <i class="fas fa-user-circle" style="margin-right: 5px;"></i>
+                      Manager
                     </a>
-                    <div class="user-info" style="display: flex; align-items: center;">
-                        <i class="fas fa-user-circle" style="margin-right: 5px;"></i>
-                        Vũ Văn Sĩ
-                    </div>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="right: 0; left: auto;">
+                      <li><a class="dropdown-item" href="#"><i class="fas fa-user"></i> Thông tin tài khoản</a></li>
+                    </ul>
+                  </div>
+                  <!-- User Dropdown Menu End -->
                 </div>
-            </div>
+              </div>
+                            
         </div>
     </div>
 </header>
@@ -85,18 +100,41 @@
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="them-nguoi-dung" role="tabpanel" aria-labelledby="them-nguoi-dung-tab">
                 <h2>Thêm Người Dùng</h2>
-                <form>
+                <form id="user-form">
                     <div class="mb-3">
                         <label for="username" class="form-label">Tên người dùng:</label>
                         <input type="text" class="form-control" id="username" name="username">
                     </div>
                     <div class="mb-3">
+                        <label for="email" class="form-label">Địa chỉ Email:</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                    </div>
+                    <div class="mb-3">
                         <label for="password" class="form-label">Mật khẩu:</label>
-                        <input type="password" class="form-control" id="password" name="password">
+                        <input type="text" class="form-control" id="password" name="password">
                     </div>
                     <button type="submit" class="btn btn-primary">Thêm</button>
                 </form>
+                <!-- Đây là nơi thêm bảng thông tin người dùng mới -->
+                <div class="user-info-table mt-4">
+                    <h3>Thông Tin Người Dùng</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th  scope = "col">Tên người dùng</th>
+                                <th  scope = "col">Email</th>
+                                <th scope = "col">Mật khẩu</th>
+                                <th scope="col"> Sửa</th>
+                                <th scope = "col">Xóa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Dữ liệu hàng sẽ được thêm vào đây thông qua JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
             </div>
+            
             <div class="tab-pane fade" id="them-chuyen-bay" role="tabpanel" aria-labelledby="them-chuyen-bay-tab">
                 <h2>Thêm Chuyến Bay</h2>
                 <form id="flight-form">
@@ -221,7 +259,72 @@
     });
     </script>
     
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var selectedRow = null;
+
+            document.getElementById('user-form').addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                if (selectedRow) {
+                    // Update the row
+                    updateRow();
+                } else {
+                    // Add new row
+                    addRow();
+                }
+            });
+
+            function addRow() {
+                var username = document.getElementById('username').value;
+                var email = document.getElementById('email').value;
+                var password = document.getElementById('password').value;
+
+                var row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${username}</td>
+                    <td>${email}</td>
+                    <td>${password}</td>
+                    <td><button class="btn btn-primary btn-sm edit">Sửa</button></td>
+                    <td><button class="btn btn-danger btn-sm delete">Xóa</button></td>
+                `;
+
+                document.querySelector('.user-info-table table tbody').appendChild(row);
+
+                var editButton = row.querySelector('.edit');
+                editButton.onclick = function () {
+                    selectRowToEdit(row);
+                };
+
+                var deleteButton = row.querySelector('.delete');
+                deleteButton.onclick = function () {
+                    row.remove();
+                };
+
+                document.getElementById('user-form').reset();
+            }
+
+            function selectRowToEdit(row) {
+                selectedRow = row;
+                document.getElementById('username').value = row.cells[0].textContent;
+                document.getElementById('email').value = row.cells[1].textContent;
+                document.getElementById('password').value = row.cells[2].textContent;
+            }
+
+            function updateRow() {
+                selectedRow.cells[0].textContent = document.getElementById('username').value;
+                selectedRow.cells[1].textContent = document.getElementById('email').value;
+                selectedRow.cells[2].textContent = document.getElementById('password').value;
+
+                document.getElementById('user-form').reset();
+                selectedRow = null;
+            }
+        });
+    </script>
+        
 <script>
+
+
 </script>
 
  
