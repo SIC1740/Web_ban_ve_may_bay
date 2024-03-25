@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Webbay</title>
+    <title>Admin</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -137,7 +137,7 @@
                                 <td>Vu Van Si</td>
                                 <td>vusi@gmail.com</td>
                                 <td>si178923</td>
-                                <td><a href="#" class="btn edit-btn">Sửa</a></td>
+                                <td><a href="#" class="btn btn-primary">Sửa</a></td>
                                 <td><button class="btn btn-danger delete-btn" data-email="vusi@gmail.com">Xóa</button></td>
                             </tr>
                         </tbody>
@@ -161,17 +161,18 @@
                         <input type="text" class="form-control" id="flight-number" name="flight-number">
                     </div>
                     <div class="mb-3">
-                        <label for="departure-date" class="form-label">Ngày xuất phát:</label>
-                        <input type="date" class="form-control" id="departure-date" name="departure-date">
-                    </div>
+                        <label for="departure-date" class="form-label">Ngày xuất phát (Ngày/Tháng/Năm):</label>
+                        <input type="text" class="form-control" id="departure-date" name="departure-date">
+                    </div>                    
                     <div class="mb-3">
                         <label for="departure" class="form-label">Giờ khởi hành:</label>
-                        <input type="time" class="form-control" id="departure" name="departure">
+                        <input type="text" class="form-control" id="departure" name="departure">
                     </div>
                     <div class="mb-3">
                         <label for="arrival" class="form-label">Thời gian đến:</label>
-                        <input type="time" class="form-control" id="arrival" name="arrival">
+                        <input type="text" class="form-control" id="arrival" name="arrival">
                     </div>
+                    
                     <div class="mb-3">
                         <label for="price" class="form-label">Giá:</label>
                         <input type="number" class="form-control" id="price" name="price" placeholder="Giá vé (VND)">
@@ -191,12 +192,26 @@
                                 <th scope="col">Ngày xuất phát</th>
                                 <th scope="col">Giờ khởi hành</th>
                                 <th scope="col">Thời gian đến</th>
+                                <th scope="col">Giá</th>
                                 <th scope= "col"> Sửa</th>
                                 <th scope= "col">Xóa</th>
                             </tr>
                         </thead>
                         <tbody>
                             <!-- Dữ liệu hàng sẽ được thêm vào đây -->
+                            <tr>
+                                <td>1</td>
+                                <td>Hà Nội</td>
+                                <td>TP Hồ Chí Minh</td>
+                                <td>VN123</td>
+                                <td>01/01/2024</td>
+                                <td>08:00</td>
+                                <td>11:00</td>
+                                <td>1,000,000 VND</td> 
+                                <td><a href="#" class="btn btn-primary">Sửa</a></td>
+                                <td><button class="btn btn-danger delete-btn">Xóa</button></td>
+                            </tr>
+                            
                         </tbody>
                     </table>
                 </div>
@@ -241,10 +256,6 @@
       x.className = x.className.replace(" w3-show", "");
     }
   }
-  </script>
-        
-<script>
-
 
 </script>
 
