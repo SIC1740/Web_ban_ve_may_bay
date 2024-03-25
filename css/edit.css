@@ -296,11 +296,7 @@
         background-color: #ddd;
         cursor: default;
     }
-    .edit-btn, .delete-btn {
-        display: inline-block; /* Makes sure the anchor behaves like a button */
-        /* Other styles remain the same */
-    }
-    
+
     
 
     /* --CONTACT-- */

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Webbay</title>
+    <title>Sửa chuyến bay</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,7 +20,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.vi.min.js"></script>
     
 
-    <link rel="stylesheet" type="text/css" href="admin.css" />
+    <link rel="stylesheet" type="text/css" href="css/edit.css" />
 
 
 </head>
@@ -91,62 +91,13 @@
         <p id="info-content"></p>
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="them-nguoi-dung-tab" data-bs-toggle="tab" data-bs-target="#them-nguoi-dung" type="button" role="tab" aria-controls="them-nguoi-dung" aria-selected="true">Thêm Người Dùng</button>
-            </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="them-chuyen-bay-tab" data-bs-toggle="tab" data-bs-target="#them-chuyen-bay" type="button" role="tab" aria-controls="them-chuyen-bay" aria-selected="false">Thêm Chuyến Bay</button>
+                <button class="nav-link" id="them-chuyen-bay-tab" data-bs-toggle="tab" data-bs-target="#them-chuyen-bay" type="button" role="tab" aria-controls="them-chuyen-bay" aria-selected="false">Sửa Chuyến Bay</button>
             </li>
         </ul>
         <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="them-nguoi-dung" role="tabpanel" aria-labelledby="them-nguoi-dung-tab">
-                <h2>Thêm Người Dùng</h2>
-                <form id="user-form">
-                    <div class="mb-3">
-                        <label for="username" class="form-label">Tên người dùng:</label>
-                        <input type="text" class="form-control" id="username" name="username">
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Địa chỉ Email:</label>
-                        <input type="email" class="form-control" id="email" name="email">
-                    </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">Mật khẩu:</label>
-                        <input type="text" class="form-control" id="password" name="password">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Thêm</button>
-                </form>
-                <!-- Đây là nơi thêm bảng thông tin người dùng mới -->
-                <div class="user-info-table mt-4">
-                    <h3>Thông Tin Người Dùng</h3>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope= "col">Số thứ tự</th>
-                                <th scope= "col">Tên người dùng</th>
-                                <th scope= "col">Email</th>
-                                <th scope= "col">Mật khẩu</th>
-                                <th scope= "col"> Sửa</th>
-                                <th scope= "col">Xóa</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Dữ liệu hàng sẽ được thêm vào đây thông qua JavaScript -->
-                        <!-- Add the example user row -->
-                            <tr>
-                                <td>1</td> <!-- Assuming this is the first row -->
-                                <td>Vu Van Si</td>
-                                <td>vusi@gmail.com</td>
-                                <td>si178923</td>
-                                <td><a href="#" class="btn edit-btn">Sửa</a></td>
-                                <td><button class="btn btn-danger delete-btn" data-email="vusi@gmail.com">Xóa</button></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
             
             <div class="tab-pane fade" id="them-chuyen-bay" role="tabpanel" aria-labelledby="them-chuyen-bay-tab">
-                <h2>Thêm Chuyến Bay</h2>
+                <h2>Sửa Chuyến Bay</h2>
                 <form id="flight-form">
                     <div class="mb-3">
                         <label for="departure-location" class="form-label">Điểm đi:</label>
@@ -172,12 +123,7 @@
                         <label for="arrival" class="form-label">Thời gian đến:</label>
                         <input type="time" class="form-control" id="arrival" name="arrival">
                     </div>
-                    <div class="mb-3">
-                        <label for="price" class="form-label">Giá:</label>
-                        <input type="number" class="form-control" id="price" name="price" placeholder="Giá vé (VND)">
-                    </div>
-                    
-                    <button type="submit" class="btn btn-primary">Thêm</button>
+                    <button type="submit" class="btn btn-primary">Lưu</button>
                 </form>
                 <div class="flight-list mt-4">
                     <h3>Danh Sách Chuyến Bay</h3>
@@ -190,9 +136,6 @@
                                 <th scope="col">Số hiệu chuyến bay</th>
                                 <th scope="col">Ngày xuất phát</th>
                                 <th scope="col">Giờ khởi hành</th>
-                                <th scope="col">Thời gian đến</th>
-                                <th scope= "col"> Sửa</th>
-                                <th scope= "col">Xóa</th>
                             </tr>
                         </thead>
                         <tbody>
