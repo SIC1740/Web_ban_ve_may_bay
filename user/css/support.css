@@ -50,203 +50,266 @@ html {
   /* Remove text-shadow if it's not needed for black text */
 }
 
-/* --login--  */
-/* Login Section Styles */
-/* Base Styles */
-/* Base Styles */
-body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background-color: #f9f9f9;
-  margin: 0;
+/#paymentOptions {
+  background-color: #f5f5f5;
   padding: 20px;
-}
-
-/* Section Styling */
-#paymentOptions {
-  margin-top: 100px;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Container Adjustments */
-#paymentOptions .container {
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.nav-link {
+  margin-bottom: 5px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #007bff;
+  color: white !important;
+  transform: scale(1.05);
+}
+
+.card {
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
   padding: 20px;
 }
 
-/* List Group Enhancements */
-#paymentOptions .list-group-item {
-  background-color: #007bff;
-  color: white;
-  border: none;
+.card-title {
+  color: #333;
   margin-bottom: 10px;
-  border-radius: 0.5rem;
-  transition: background-color 0.3s, box-shadow 0.3s;
 }
 
-#paymentOptions .list-group-item:hover {
-  background-color: #0056b3;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+.card-text {
+  color: #666;
 }
 
-/* Card Styling */
-#paymentOptions .card {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 0.5rem;
-  border: none;
-  margin-bottom: 20px;
-  transition: transform 0.2s;
-}
-
-#paymentOptions .card:hover {
-  transform: translateY(-5px);
-}
-
-#paymentOptions .card-body {
-  display: flex;
-  align-items: center;
-}
-
-#paymentOptions .card-title {
-  color: #007bff;
-}
-
-#paymentOptions .card-text {
-  margin-left: 12px;
-}
-
-/* Adjusting Image Styles for Non-Circular Appearance */
-#paymentOptions .card img {
-  /* Remove border-radius for square images */
-  margin-right: 15px;
-  width: 60px; /* Adjust size as needed */
-  /* Remove border property if you don't want a border */
-}
-
-/* Collapsible Content Animation */
-#paymentOptions .collapse:not(.show) {
-  display: none;
-}
-
-#paymentOptions .collapse.show {
+.tab-pane {
   animation: fadeIn 0.5s;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
 }
 
-/* Additional Styling for Lists */
-#paymentOptions ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-#paymentOptions ul li {
-  padding-left: 20px;
-  position: relative;
-}
-
-#paymentOptions ul li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 9px;
-  height: 6px;
-  width: 6px;
+button {
   background-color: #007bff;
-  border-radius: 50%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-/* Cài đặt chung */
-body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f4f4f4;
-}
-
-/* Accordion và Card */
-.card {
-  background-color: #ffffff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.card-header {
-  background: #007bff;
-  color: #ffffff;
-  padding: 10px 15px;
-  text-align: center;
-  border-bottom: 1px solid rgba(0,0,0,0.125);
-}
-
-.card-header button {
-  background-color: #0069d9;
   color: white;
   border: none;
   padding: 10px 20px;
-  margin: 5px;
+  margin-right: 10px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+/* Thiết lập cơ bản cho nav pills */
+.nav {
+  display: flex;
+  flex-direction: column; /* Sắp xếp các nav-link theo hàng dọc */
+  padding-left: 0; /* Xóa padding mặc định */
+  margin-bottom: 0; /* Xóa margin dưới cùng */
+}
+
+.nav-link {
+  color: #495057; /* Màu chữ mặc định */
+  background-color: #e9ecef; /* Màu nền mặc định */
+  border: 1px solid #dee2e6; /* Viền cho mỗi nav-link */
+  margin: 5px 0; /* Khoảng cách giữa các nav-link */
+  border-radius: 0.25rem; /* Bo tròn góc */
+  transition: all 0.3s ease; /* Hiệu ứng chuyển cảnh mượt mà */
+  text-align: center; /* Căn giữa chữ */
+  padding: 10px; /* Padding cho nav-link */
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #fff; /* Màu chữ khi hover hoặc active */
+  background-color: #007bff; /* Màu nền khi hover hoặc active */
+  border-color: #007bff; /* Màu viền khi hover hoặc active */
+  transform: translateY(-2px); /* Di chuyển lên nhẹ khi hover */
+}
+
+/* Tăng cỡ chữ cho nav-link khi active hoặc hover */
+.nav-link.active, .nav-link:hover {
+  font-size: 1.1em;
+}
+/* Thiết lập chung cho các card */
+.card {
+  margin-bottom: 20px; /* Khoảng cách giữa các card */
+  border: 1px solid #e0e0e0; /* Màu viền */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Bóng đổ nhẹ */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Chuyển cảnh mượt mà */
+  border-radius: 8px; /* Bo tròn góc */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Di chuyển card lên khi hover */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Bóng đổ đậm hơn khi hover */
+}
+
+
+
+.card-title {
+  font-size:16px;
+  color: #007bff; /* Màu cho tiêu đề */
+}
+
+.card-text {
+  font-size: 16px; /* Kích thước font cho mô tả */
+  color: #333; /* Màu font cho mô tả */
+}
+
+/* Cải thiện hiển thị cho ảnh */
+
+/* Cải thiện tổng thể cho phần hiển thị thông tin */
+#v-pills-office {
+  padding: 20px; /* Đệm phía phải */
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1);
+}
+
+
+.card { 
+  padding: 20px;
+  background: white;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform .2s, box-shadow .2s; /* Thêm hiệu ứng chuyển đổi */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+
+.card-header {
+  background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+  padding: 15px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-header button {
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 20px;
+  padding: 8px 20px;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  margin: 0 5px;
 }
 
 .card-header button:hover {
-  background-color: #0056b3;
+  background: white;
+  color: #6a11cb;
+  cursor: pointer;
 }
 
-.card p, .card li {
-  padding: 10px 15px;
+.card-body {
+  padding: 20px;
 }
 
-.card ul {
-  list-style-type: none;
+.card-body iframe {
+  margin-top: 20px;
+  border-radius: 10px;
+  height: 450px; /* Đặt chiều cao cố định cho iframe */
 }
 
-/* Hiệu ứng chuyển cho bản đồ */
-[id$="-map"] {
-  display: none; /* Ẩn mặc định */
-  transition: all 0.5s ease;
+/* Tăng cường hiệu ứng cho button */
+button:focus, button:active {
+  outline: none;
+  box-shadow: none;
 }
 
-/* Hiển thị bản đồ khi được chọn */
-.show-map {
-  display: block !important;
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .card-header button {
+      width: 100%;
+      margin: 10px 0;
+  }
+
+  .card-body iframe {
+      height: 300px; /* Giảm chiều cao cho iframe trên thiết bị di động */
+  }
 }
 
-/* Phong cách cho iframe bản đồ */
-iframe {
-  width: 100%;
-  border: none;
-  border-radius: 0 0 8px 8px;
+/* Điều chỉnh lại cho responsive */
+@media (max-width: 768px) {
+  .card-body {
+      padding: 15px; /* Giảm padding cho màn hình nhỏ */
+  }
+
+  .card {
+      margin-bottom: 15px; /* Giảm khoảng cách giữa các card */
+  }
+}
+#v-pills-home .card {
+  background-color: #ffffff; /* Màu nền */
+  border-radius: 10px; /* Bo tròn viền */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bóng đổ nhẹ */
+  padding: 20px; /* Đệm bên trong */
+  margin-top: 20px; /* Khoảng cách từ phần tử trước */
+  border: 1px solid #e0e0e0; /* Viền mảnh */
+  transition: all 0.3s ease; /* Hiệu ứng chuyển cảnh mượt mà */
 }
 
-/* Hiệu ứng khi bản đồ được hiển thị */
-.show-map iframe {
-  animation: fadeInMap 0.5s ease-out;
+#v-pills-home .card:hover {
+  transform: translateY(-5px); /* Di chuyển lên nhẹ khi hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Tăng độ mờ của bóng đổ */
 }
 
-@keyframes fadeInMap {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+#v-pills-home strong {
+  color: #007bff; /* Màu sắc cho chữ đậm */
+  font-size: 18px; /* Kích thước font */
 }
 
-/* Tùy chỉnh cho phần thông tin */
-.card p, .card li {
-  color: #555; /* Màu chữ */
+#v-pills-home ul {
+  padding-left: 20px; /* Khoảng cách lề cho danh sách */
 }
 
-hr {
-  margin-top: 0;
-  margin-bottom: 20px;
-  border: 0;
-  border-top: 1px solid #eee;
+#v-pills-home li {
+  margin-bottom: 10px; /* Khoảng cách giữa các mục */
 }
+
+#v-pills-home hr {
+  border-top: 1px solid #e0e0e0; /* Đổi màu viền cho thanh ngăn cách */
+  margin-top: 20px; /* Khoảng cách trên cho ngăn cách */
+  margin-bottom: 20px; /* Khoảng cách dưới cho ngăn cách */
+}
+
+#v-pills-home p {
+  color: #666; /* Màu chữ */
+  line-height: 1.6; /* Khoảng cách dòng */
+}
+
 
 
 /* --CONTACT-- */
