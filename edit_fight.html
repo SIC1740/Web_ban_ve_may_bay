@@ -96,7 +96,7 @@
         </ul>
         <div class="tab-content" id="myTabContent">
             
-            <div class="tab-pane fade" id="them-chuyen-bay" role="tabpanel" aria-labelledby="them-chuyen-bay-tab">
+            <div class="tab-pane fade show active" id="them-chuyen-bay" role="tabpanel" aria-labelledby="them-chuyen-bay-tab">
                 <h2>Sửa Chuyến Bay</h2>
                 <form id="flight-form">
                     <div class="mb-3">
@@ -133,6 +133,10 @@
                         <label for="arrival" class="form-label">Thời gian đến:</label>
                         <input type="text" class="form-control" id="arrival" name="arrival">
                     </div>
+                    <div class="mb-3">
+                      <label for="price" class="form-label">Giá vé:</label>
+                      <input type="number" class="form-control" id="price" name="price" placeholder="Giá vé (VND)">
+                  </div>
                     <button type="submit" class="btn btn-primary">Lưu</button>
                 </form>
                 <div class="flight-list mt-4">
@@ -146,6 +150,7 @@
                                 <th scope="col">Số hiệu chuyến bay</th>
                                 <th scope="col">Ngày xuất phát</th>
                                 <th scope="col">Giờ khởi hành</th>
+                                <th scope="col">Giá vé</th>
                             </tr>
                         </thead>
                         <tbody>
