@@ -34,12 +34,143 @@
       margin-bottom: -10px;
   }
   /* --seclection--  */
-.demo{
-  margin-top: 100px;
-}
 .step-indicator {
     background-color: #007bff; /* Adjust this color to match the image */
     color: #fff;
+  }
+  .FlightSelectionTable {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+  }
+  
+  .FlightSelectionTable table {
+    table-layout: fixed;
+    width: 100%;
+  }
+  
+  .FlightSelectionTable th, .FlightSelectionTable td {
+    width: auto;
+    white-space: nowrap;
+  }
+  
+  .FlightSelectionTable thead th {
+    background-color: #333;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+  
+  .FlightSelectionTable tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+  
+  .FlightSelectionTable tbody tr:hover {
+    background-color: #ddd;
+  }
+  
+  .FlightSelectionTable td {
+    padding: 8px;
+    text-align: left;
+  }
+  .table {
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  .table th, .table td {
+     word-wrap: break-word;
+    white-space: normal;
+  }
+  
+  .table th:nth-child(5), .table td:nth-child(5) {
+    width: 40%;
+  }
+  
+  .table th:last-child, .table td:last-child {
+    width: 10%;
+  }
+  
+  .nav-pills {
+    white-space: nowrap;
+  }
+  
+  .tab-content {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  .totalprice.table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  
+  .totalprice.table th, .totalprice.table td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+  }
+  .totalprice.table th:nth-child(1), .totalprice.table td:nth-child(1) {
+    width: 20%; 
+  }
+  
+  .totalprice.table th:nth-child(2), .totalprice.table td:nth-child(2) {
+    width: 20%; 
+  }
+  
+  .totalprice.table th:nth-child(3), .totalprice.table td:nth-child(3) {
+    width: 30%; 
+  }
+  
+  .totalprice.table th:nth-child(4), .totalprice.table td:nth-child(4) {
+    width: 30%;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .totalprice.table, .totalprice.table thead, .totalprice.table tbody, .totalprice.table th, .totalprice.table td, .totalprice.table tr {
+      display: block;
+    }
+    .totalprice.table thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    .totalprice.table tr { border: 1px solid #ccc; margin-bottom: 5px; }
+    .totalprice.table td {
+      border: none;
+      padding: 10px;
+      text-align: right;
+      position: relative;
+      padding-left: 50%;
+    }
+    .totalprice.table td:before {
+      content: attr(data-label);
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .table th, .table td {
+      display: block;
+      width: 100%;
+    }
+    .nav-pills, .tab-content {
+      width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .FlightSelectionTable {
+      width: auto;
+    }
   }
   
   .navbar-light .navbar-nav .nav-link {
@@ -308,14 +439,101 @@
       padding: 20px;
       font-size: 15px;
   }
-  html {
-      scroll-behavior: smooth;
-    }
-    
-    * {
-      margin: 0;
-      padding: 0;
-    }
+  /* General Body Styles */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Container and Section Styling */
+.container {
+  background-color: #ffffff;
+  border: 1px solid #d3d3d3;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Tab Navigation Styles */
+.nav-tabs {
+  border-bottom: 3px solid #d3d3d3;
+}
+
+.nav-link {
+  border: none;
+  font-weight: 600;
+  color: #6c757d;
+  background-color: transparent;
+  margin-right: 8px;
+  padding: 12px 20px;
+  border-radius: 15px 15px 0 0;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-link.active, .nav-link:focus, .nav-link:hover {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  border-radius: 15px 15px 0 0;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+/* Tab Content Styling */
+.tab-content {
+  background-color: #ffffff;
+  border: 1px solid #d3d3d3;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.tab-pane {
+  font-size: 0.95rem;
+  color: #5a5a5a;
+}
+
+h4, h5 {
+  color: #007bff;
+}
+
+.table {
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.table th {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.table td, .table th {
+  padding: 10px;
+  border: 1px solid #d3d3d3;
+  transition: background-color 0.3s;
+}
+
+.table tbody tr:hover {
+  background-color: #f2f2f2;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-tabs {
+      display: block;
+  }
+
+  .nav-link {
+      display: block;
+      text-align: center;
+      margin-bottom: 5px;
+  }
+}
+
     @media screen and (max-width: 1500px) {
       .search .w3-display-middle {
           width: 50%; /* Adjust width for better display on large screens */

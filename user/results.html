@@ -36,7 +36,7 @@
               <div style="margin-right: 20px;">
                 <a href="tel:19001250" class="phone-number" style="text-decoration: none; color: #fff;">
                   <i class="fas fa-phone"></i>
-                  1900 1250
+                  0817 9527 41
                 </a>
                 <!-- User Dropdown Menu Start -->
                 <div class="dropdown">
@@ -59,7 +59,7 @@
               <div style="margin-right: 20px;">
                 <a href="tel:19001250" class="phone-number" style="text-decoration: none; color: #fff;">
                   <i class="fas fa-phone"></i>
-                  1900 1250
+                  0817 9527 41
                 </a>
                 <!-- User Dropdown Menu Start -->
                 <div class="dropdown">
@@ -92,14 +92,14 @@
     <div class="row align-items-center">
       <div class="col">
         <h2 class="h5 mb-0">CHUYẾN ĐI</h2>
-        <p class="mb-0">Hà Nội (HAN) ➜ Hồ Chí Minh (SGN)</p>
+        <p class="mb-0">Hà Nội  ➜ Tp Hồ Chí Minh</p>
         <p class="mb-0">Thứ sáu, 22/03/2024 (13/2 ÂL), 1 khách</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="container mt-3">
+<section class="FlightSelectionTable container mt-3">
   <table class="table table-hover">
     <thead>
       <tr>
@@ -107,8 +107,8 @@
         <th>Bắt đầu</th>
         <th>Kết thúc</th>
         <th>Giá</th>
-        <th>Seclect</th>
-        <th></th> <!-- Empty for button column -->
+        <th>Chi tiết chuyến bay</th>
+        <th>Seclect</th> <!-- Empty for button column -->
       </tr>
     </thead>
     <tbody>
@@ -121,103 +121,161 @@
         </td>
         <td>
           <span>20:45</span><br>
-          <small class="text-muted">HAN</small>
+          <small class="text-muted">Hà Nội</small>
         </td>
         <td>
           <span>22:55</span><br>
-          <small class="text-muted">SGN</small>
+          <small class="text-muted">Tp Hồ Chí Minh</small>
         </td>
         <td>
-          <span class="price">1.290.000₫</span><br>
+          <span class="price">1.290.000 VND</span><br>
           <small class="text-muted">(L1_ECO)</small>
         </td>
         <td>
-          <a href="#" class="text-info">Chi tiết</a>
+          <a href="#flightDetailsVJ161" class="text-info" data-bs-toggle="collapse">Chi tiết</a>
+          <div class="container mt-3 collapse" id="flightDetailsVJ161">
+  <!-- Pill navs -->
+  <ul class="nav nav-pills mb-3" id="pills-tabVJ161" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="pills-flight-info-tab-VJ161" data-bs-toggle="pill" data-bs-target="#pills-flight-info-VJ161" type="button" role="tab" aria-controls="pills-flight-info-VJ161" aria-selected="true">Thông tin</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-price-details-tab-VJ161" data-bs-toggle="pill" data-bs-target="#pills-price-details-VJ161" type="button" role="tab" aria-controls="pills-price-details-VJ161" aria-selected="false">Chi tiết giá vé</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-ticket-conditions-tab-VJ161" data-bs-toggle="pill" data-bs-target="#pills-ticket-conditions-VJ161" type="button" role="tab" aria-controls="pills-ticket-conditions-VJ161" aria-selected="false">Điều kiện vé</button>
+    </li>
+  </ul>
+
+  <!-- Pill content -->
+  <div class="tab-content" id="pills-tabContentVJ161">
+    <div class="tab-pane fade show active" id="pills-flight-info-VJ161" role="tabpanel" aria-labelledby="pills-flight-info-tab-VJ161">
+      <p>Hà Nội  → Hồ Chí Minh </p>
+      <p>Máy bay</p>
+      <p>Hành lý xách tay: 7Kg(56x36x23)cm</p>
+      <p>Hành lý ký gửi: 0Kg</p>
+    </div>
+    <div class="tab-pane fade" id="pills-price-details-VJ161" role="tabpanel" aria-labelledby="pills-price-details-tab-VJ161">
+      <h4>TỔNG GIÁ VÉ</h4>
+      <table class="totalprice table">
+        <thead>
+          <tr>
+            <th>Hành khách</th>
+            <th>Số lượng</th>
+            <th>Giá mỗi vé</th>
+            <th>Tổng giá</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Người lớn</td>
+            <td>1</td>
+            <td>1.028.000VND</td>
+            <td>1.028.000VND</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tab-pane fade" id="pills-ticket-conditions-VJ161" role="tabpanel" aria-labelledby="pills-ticket-conditions-tab-VJ161">
+      <h5>Hoàn vé: Không được phép</h5>
+      <p>Thay đổi ngày, giờ bay: 385.000VND/người/chặng + chênh lệch (nếu có)</p>
+      <p>Thay đổi tên hành khách: 385.000VND/người/chặng + chênh lệch (nếu có)</p>
+      <p>Thời hạn thay đổi (bao gồm thay đổi tên, ngày/chuyến bay, hành trình): Mọi thông tin thay đổi đều phải thực hiện trước tối thiểu 06 tiếng so với giờ khởi hành</p>
+    </div>
+  </div>
+</div>
         </td>
         <td>
-          <button class="btn btn-primary">Chọn</button>
+          <button type = "button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Chọn</button>
         </td>
       </tr>
       <tr>
-  <td>
-    <span class="badge bg-danger">Vietjet</span>
-    <span>VJ161</span><br>
-    <small class="text-muted">Airbus A321</small>
-  </td>
-  <td>
-    <span>22:05</span><br>
-    <small class="text-muted">HAN</small>
-  </td>
-  <td>
-    <span>00:25</span><br>
-    <small class="text-muted">SGN</small>
-  </td>
-  <td>
-    <span class="price">1.188.000₫</span><br>
-    <small class="flight-class text-muted">(N)</small>
-  </td>
-  <td>
-    <a href="#" class="text-info">Chi tiết</a>
-  </td>
-  <td>
-    <button class="btn btn-primary">Chọn</button>
-  </td>
-</tr>
-<tr>
-  <td>
-    <span class="badge bg-success">Bamboo</span>
-    <span>QH289</span><br>
-    <small class="text-muted">Airbus A320</small>
-  </td>
-  <td>
-    <span>20:15</span><br>
-    <small class="text-muted">HAN</small>
-  </td>
-  <td>
-    <span>22:25</span><br>
-    <small class="text-muted">SGN</small>
-  </td>
-  <td>
-    <span class="price">1.419.000₫</span><br>
-    <small class="flight-class text-muted">(EconomySmart)</small>
-  </td>
-  <td>
-    <a href="#" class="text-info">Chi tiết</a>
-  </td>
-  <td>
-    <button class="btn btn-primary">Chọn</button>
-  </td>
-</tr>
-<tr>
-  <td>
-    <span class="badge bg-warning text-dark">Vietravel</span>
-    <span>VU753</span><br>
-    <small class="text-muted">Airbus A321</small>
-  </td>
-  <td>
-    <span>08:40</span><br>
-    <small class="text-muted">HAN</small>
-  </td>
-  <td>
-    <span>10:55</span><br>
-    <small class="text-muted">SGN</small>
-  </td>
-  <td>
-    <span class="price">1.348.000₫</span><br>
-    <small class="flight-class text-muted">(O)</small>
-  </td>
-  <td>
-    <a href="#" class="text-info">Chi tiết</a>
-  </td>
-  <td>
-    <button class="btn btn-primary">Chọn</button>
-  </td>
-</tr>
-      <!-- Continue with other rows as needed -->
     </tbody>
   </table>
 </section>
+<!-- Đặt phần tử này ở nơi bạn muốn hiển thị thông báo -->
+<section id="notificationSection">
+  <!-- Modal Thông Báo -->
+  <div class="modal fade" id="notificationModal" tabindex="-1" aria-labelledby="notificationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="notificationModalLabel">Thông Báo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Bạn đã chọn vé thánh công.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section class="modal fade" id="myModal">
+  <div class="modal-dialog  modal-lg">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Bạn có chắc chắn muốn chọn loại vé này</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <table class="info_flight table table-striped">
+          <thead>
+              <tr>
+                  <th scope="col"></th>
+                  <th scope="col">Thông Tin</th>
+                  <th scope="col">Chi Tiết</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <th scope="row">1</th>
+                  <td>Mã chuyến bay</td>
+                  <td><span class="badge bg-danger">Vietjet</span> VJ161</td>
+              </tr>
+              <tr>
+                  <th scope="row">2</th>
+                  <td>Điểm đi</td>
+                  <td>Hà Nội</td>
+              </tr>
+              <tr>
+                  <th scope="row">3</th>
+                  <td>Điểm đến</td>
+                  <td>Tp Hồ Chí Minh</td>
+              </tr>
+              <tr>
+                  <th scope="row">4</th>
+                  <td>Thời gian đến</td>
+                  <td>20:45</td>
+              </tr>
+              <tr>
+                  <th scope="row">5</th>
+                  <td>Thời gian đi</td>
+                  <td>22:55</td>
+              </tr>
+              <tr>
+                  <th scope="row">6</th>
+                  <td>Giá</td>
+                  <td>1.290.000 VND</td>
+              </tr>
+          </tbody>
+      </table>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" id="chooseButton">Chọn</button>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="contact-section">
   <div class="row">
     <div class="col span-1-of-3">
@@ -255,53 +313,26 @@
     }
   }
   </script>
-  <script>
-    // Tabs
-    function openLink(evt, linkName) {
-      var i, x, tablinks;
-      x = document.getElementsByClassName("myLink");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablink");
-      for (i = 0; i < x.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
-      }
-      document.getElementById(linkName).style.display = "block";
-      evt.currentTarget.className += " w3-red";
-    }
-    0
-    // Click on the first tablink on load
-    document.getElementsByClassName("tablink")[0].click();
-    </script>
-    <script>
-      $(document).ready(function(){
-        $('#datepicker').datepicker({
-          autoclose: true,
-          todayHighlight: true,
-          format: 'dd/mm/yyyy',
-          startDate: new Date(),
-          language: 'vi'
-        });
+<script>
+  $(document).ready(function() {
+      $('#chooseButton').click(function() {
+          // Hiển thị modal thông báo
+          $('#notificationModal').modal('show');
       });
-      </script>
-      <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-              e.preventDefault(); 
-              var target = document.querySelector(this.getAttribute('href'));
-              if(target) {
-                target.scrollIntoView({
-                  behavior: 'smooth', 
-                  block: 'start' 
-                });
-              }
-            });
-          });
-        });
-      </script>
-      
+  
+      // Khi modal thông báo được hiển thị
+      $('#notificationModal').on('shown.bs.modal', function () {
+          // Đặt thời gian chờ 5 giây trước khi chuyển trang
+          setTimeout(function() {
+              window.location.href = "https://www.youtube.com/"; // Thay đổi URL tại đây
+          }, 3000); // 5000 milliseconds = 5 seconds
+      });
+  });
+  </script>
+  
+<script>
+
+</script>
       
 </body>
 </html>

@@ -1,74 +1,23 @@
-<section class="w3-display-container w3-content w3-hide-small search" style="max-width:2500px" id = "Home">
+<section class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
 
-  <img class="w3-image" src="https://www.w3schools.com/w3images/london2.jpg" alt="London" style="width:100%; height:auto;">
-  <div class="w3-display-middle" style="width:60%">
-    <div class="w3-bar w3-black">
-      <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Flight');"><i class="fa fa-plane w3-margin-right"></i>Đặt bé máy bay</button>
-    </div>
-
-    <div id="Flight" class="w3-container w3-white w3-padding-16 myLink">
-      <h3>Website đặt vé máy bay tốt nhất dành cho <br>
-      sinh viên PTIT</h3>
-      <div class="w3-row-padding" style="margin:0 -16px;">
-        <div class="w3-half origin-location">
-          <label>Điểm đi</label>
-
-
-          <input class="w3-input w3-border form-control dropdown-toggle" type="text" data-bs-toggle = "dropdown" placeholder="Hà Nội" aria-label="Tìm thành phố1">
-
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" href="#">Hà Nội</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Tp Hồ Chí Minh</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Đà Nẵng</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Nha Trang</a>
-            </li>
-          </ul>
-          <button class="btn btn-outline-secondary" type="button" id="dropdownMenuButton">
-            <i class="bi bi-chevron-down"></i>
-          </button>
-        </div>
-        <div class="w3-half destination-location">
-          <label>Điểm đến</label>
-          <input class="w3-input w3-border form-control dropdown-toggle" type="text" data-bs-toggle="dropdown" placeholder="Tp Hồ Chí Minh" aria-label="Tìm thành phố">
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" href="#">Hà Nội</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Tp Hồ Chí Minh</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Đà Nẵng</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Nha Trang</a>
-            </li>
-          </ul>
-          <button class="btn btn-outline-secondary" type="button" id="dropdownMenuButton">
-            <i class="bi bi-chevron-down"></i>
-          </button>
-        </div>
-        <div class="w3-half">
-          <label for="departure-date" class="form-label">Ngày xuất phát</label>
-          <div class="input-group date" id="datepicker">
-            <input type="text" class="form-control" id="departure-date" placeholder="Chọn ngày xuất phát">
-            <span class="input-group-append">
-              <span class="input-group-text bg-white d-block">
-                <i class="bi bi-calendar3"></i>
-              </span>
-            </span>
-          </div>
-        </div>
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
       </div>
-      <p><button class="w3-button w3-dark-grey">Tìm kiếm</button></p>
-    </div>
 
+      <!-- Modal body -->
+      <div class="modal-body">
+        Modal body..
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
   </div>
 </section>

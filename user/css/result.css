@@ -42,25 +42,208 @@
     color: #fff;
   }
   
-  .navbar-light .navbar-nav .nav-link {
+  .FlightSelectionTable {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+  }
+  
+  .FlightSelectionTable table {
+    table-layout: fixed;
+    width: 100%;
+  }
+  
+  .FlightSelectionTable th, .FlightSelectionTable td {
+    width: auto;
+    white-space: nowrap;
+  }
+  
+  .FlightSelectionTable thead th {
+    background-color: #333;
     color: #fff;
-    margin-right: 2rem; /* Adjust spacing as needed */
+    position: sticky;
+    top: 0;
+    z-index: 2;
   }
   
-  .navbar-light .navbar-nav .nav-link.active {
-    font-weight: bold;
+  .FlightSelectionTable tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+  }
+  
+  .FlightSelectionTable tbody tr:hover {
+    background-color: #ddd;
+  }
+  
+  .FlightSelectionTable td {
+    padding: 8px;
+    text-align: left;
+  }
+  .table {
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  .table th, .table td {
+     word-wrap: break-word;
+    white-space: normal;
+  }
+  
+  .table th:nth-child(5), .table td:nth-child(5) {
+    width: 40%;
+  }
+  
+  .table th:last-child, .table td:last-child {
+    width: 10%;
+  }
+  
+  .nav-pills {
+    white-space: nowrap;
+  }
+  
+  .tab-content {
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  .totalprice.table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+  
+  .totalprice.table th, .totalprice.table td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+  }
+  .totalprice.table th:nth-child(1), .totalprice.table td:nth-child(1) {
+    width: 20%; 
+  }
+  
+  .totalprice.table th:nth-child(2), .totalprice.table td:nth-child(2) {
+    width: 20%; 
+  }
+  
+  .totalprice.table th:nth-child(3), .totalprice.table td:nth-child(3) {
+    width: 30%; 
+  }
+  
+  .totalprice.table th:nth-child(4), .totalprice.table td:nth-child(4) {
+    width: 30%;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .totalprice.table, .totalprice.table thead, .totalprice.table tbody, .totalprice.table th, .totalprice.table td, .totalprice.table tr {
+      display: block;
+    }
+    .totalprice.table thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    .totalprice.table tr { border: 1px solid #ccc; margin-bottom: 5px; }
+    .totalprice.table td {
+      border: none;
+      padding: 10px;
+      text-align: right;
+      position: relative;
+      padding-left: 50%;
+    }
+    .totalprice.table td:before {
+      content: attr(data-label);
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+  /* INFO-FLIGHT */
+  .info_flight {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.info_flight thead th {
+    background-color: #005792;
+    color: #ffffff;
+    padding: 15px 10px;
+    text-align: left;
+    border-bottom: 2px solid #ffffff;
+}
+
+
+/* Định dạng độ rộng cho mỗi cột */
+.info_flight thead th:nth-child(1) { width: 10%; } /* Cột # */
+.info_flight thead th:nth-child(2) { width: 30%; } /* Cột Thông Tin */
+.info_flight thead th:nth-child(3) { width: 60%; } /* Cột Chi Tiết */
+
+.info_flight tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.info_flight tbody tr:hover {
+    background-color: #ddd;
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+}
+
+.info_flight td, .info_flight th {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.badge {
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+    font-size: 0.8em;
+    display: inline-block;
+}
+
+.bg-danger {
+    background-color: #dc3545;
+}
+
+.info_flight tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.info_flight td a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.info_flight td a:hover {
+    color: #0056b3;
     text-decoration: underline;
+}
+
+  @media screen and (max-width: 768px) {
+    .table th, .table td {
+      display: block;
+      width: 100%;
+    }
+    .nav-pills, .tab-content {
+      width: 100%;
+    }
   }
   
-  .navbar-light .navbar-nav .nav-link:hover {
-    color: #cce5ff; /* Lighter color on hover */
+  @media screen and (max-width: 600px) {
+    .FlightSelectionTable {
+      width: auto;
+    }
   }
   
-  /* Modify padding to adjust the visual */
-  .step-indicator .container-fluid {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
   
   /* Ensure the navigation bar text aligns properly on smaller screens */
   @media (max-width: 992px) {

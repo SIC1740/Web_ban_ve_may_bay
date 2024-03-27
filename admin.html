@@ -148,14 +148,25 @@
             <div class="tab-pane fade" id="them-chuyen-bay" role="tabpanel" aria-labelledby="them-chuyen-bay-tab">
                 <h2>Thêm Chuyến Bay</h2>
                 <form id="flight-form">
-                    <div class="mb-3">
-                        <label for="departure-location" class="form-label">Điểm đi:</label>
-                        <input type="text" class="form-control" id="departure-location" name="departure-location">
-                    </div>
-                    <div class="mb-3">
-                        <label for="arrival-location" class="form-label">Điểm đến:</label>
-                        <input type="text" class="form-control" id="arrival-location" name="arrival-location">
-                    </div>
+                  <div class="mb-3">
+                    <label for="departure-location" class="form-label">Điểm đi:</label>
+                    <input type="text" class="custom-input custom-border form-control dropdown-toggle" id="departure-location" name="departure-location" data-bs-toggle="dropdown" placeholder="Hà Nội" aria-label="Tìm thành phố">
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="javascript:void(0);" onclick="selectDeparture('Hà Nội')">Hà Nội</a></li>
+                      <li><a class="dropdown-item" href="javascript:void(0);" onclick="selectDeparture('Tp Hồ Chí Minh')">Tp Hồ Chí Minh</a></li>
+                      <li><a class="dropdown-item" href="javascript:void(0);" onclick="selectDeparture('Đà Nẵng')">Đà Nẵng</a></li>
+                    </ul>
+                  </div>
+                  <div class="mb-3">
+                    <label for="arrival-location" class="form-label">Điểm đến:</label>
+                    <input type="text" class="custom-input custom-border form-control dropdown-toggle" id="arrival-location" name="arrival-location" data-bs-toggle="dropdown" placeholder="Tp Hồ Chí Minh" aria-label="Tìm thành phố">
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="javascript:void(0);" onclick="selectArrival('Hà Nội')">Hà Nội</a></li>
+                      <li><a class="dropdown-item" href="javascript:void(0);" onclick="selectArrival('Tp Hồ Chí Minh')">Tp Hồ Chí Minh</a></li>
+                      <li><a class="dropdown-item" href="javascript:void(0);" onclick="selectArrival('Đà Nẵng')">Đà Nẵng</a></li>
+                    </ul>
+                  </div>
+                  
                     <div class="mb-3">
                         <label for="flight-number" class="form-label">Mã chuyến bay:</label>
                         <input type="text" class="form-control" id="flight-number" name="flight-number">
@@ -258,7 +269,19 @@
   }
 
 </script>
-
+<script>
+  function selectDeparture(city) {
+    // Cập nhật giá trị cho input 'departure-location' với giá trị được chọn
+    document.getElementById('departure-location').value = city;
+    // Thêm bất kỳ logic xử lý nào khác ở đây nếu cần
+  }
+  
+  function selectArrival(city) {
+    // Cập nhật giá trị cho input 'arrival-location' với giá trị được chọn
+    document.getElementById('arrival-location').value = city;
+    // Thêm bất kỳ logic xử lý nào khác ở đây nếu cần
+  }
+  </script>
  
      
 </body>

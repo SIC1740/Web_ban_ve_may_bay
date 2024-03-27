@@ -175,6 +175,70 @@
     background-color: #007bff;
   }
   
+  /* Định dạng cho phần tử cha của input và dropdown */
+.mb-3 {
+    position: relative; /* Điều này tạo context vị trí cho dropdown menu */
+  }
+  
+  /* Định dạng cơ bản cho input */
+  .input-custom {
+    width: 100%;
+    padding: 8px 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .input-custom:focus {
+    border-color: #66afe9;
+  }
+  
+  /* Định dạng cơ bản cho label */
+  .form-label-custom {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  /* Định dạng cho dropdown menu */
+  .dropdown-menu-custom {
+    position: absolute;
+    top: 38px; /* Điều chỉnh này dựa vào chiều cao của input của bạn */
+    left: 0;
+    width: 100%; /* Đảm bảo rằng dropdown menu bằng với chiều rộng của input */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    transition: opacity 0.4s ease, visibility 0.4s ease, max-height 0.4s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    z-index: 1000;
+  }
+  
+  /* Hiệu ứng khi input focus hoặc hover */
+  .input-custom:focus + .dropdown-menu-custom,
+  .input-custom:hover + .dropdown-menu-custom {
+    opacity: 1;
+    visibility: visible;
+    max-height: 200px; /* Điều chỉnh theo nhu cầu */
+  }
+  
+  /* Định dạng cho mục trong dropdown */
+  .dropdown-item-custom {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .dropdown-item-custom:hover {
+    background-color: #f7f7f7;
+  }
+  
   /* Adjust font awesome icons */
   .fa-user-circle, .fa-phone {
     margin-right: 8px;
