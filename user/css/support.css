@@ -160,6 +160,93 @@ body {
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+/* Cài đặt chung */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+/* Accordion và Card */
+.card {
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-header {
+  background: #007bff;
+  color: #ffffff;
+  padding: 10px 15px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0,0,0,0.125);
+}
+
+.card-header button {
+  background-color: #0069d9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.card-header button:hover {
+  background-color: #0056b3;
+}
+
+.card p, .card li {
+  padding: 10px 15px;
+}
+
+.card ul {
+  list-style-type: none;
+}
+
+/* Hiệu ứng chuyển cho bản đồ */
+[id$="-map"] {
+  display: none; /* Ẩn mặc định */
+  transition: all 0.5s ease;
+}
+
+/* Hiển thị bản đồ khi được chọn */
+.show-map {
+  display: block !important;
+}
+
+/* Phong cách cho iframe bản đồ */
+iframe {
+  width: 100%;
+  border: none;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Hiệu ứng khi bản đồ được hiển thị */
+.show-map iframe {
+  animation: fadeInMap 0.5s ease-out;
+}
+
+@keyframes fadeInMap {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tùy chỉnh cho phần thông tin */
+.card p, .card li {
+  color: #555; /* Màu chữ */
+}
+
+hr {
+  margin-top: 0;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eee;
+}
 
 
 /* --CONTACT-- */

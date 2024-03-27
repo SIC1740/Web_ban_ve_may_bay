@@ -136,7 +136,8 @@
         </div>
       </div>
       <div class="collapse" id="officePayment"  data-bs-parent="#paymentAccordion">
-          <div class="card card-body">
+        <div id="paymentAccordion">
+          <div class="card">
             <p>Sau khi đặt hàng thành công, Quý khách vui lòng qua văn phòng PTIT Airlines để thanh toán và nhận vé.</p>
             <ul>
               <li>Thời gian giao dịch: Từ 8h sáng tới 20h30 hàng ngày</li>
@@ -144,17 +145,30 @@
             </ul>
             <hr>
             <p>Vui lòng chọn đúng văn phòng gần địa chỉ nhà của Quý khách</p>
-            <address>            
-              <h5>VĂN PHÒNG PTIT AIRLINES TẠI HÀ NỘI</h5>
-            <p>Địa chỉ: Km10, Đường Nguyễn Trãi, Q.Hà Đông, Hà Nội</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.3015889884173!2d105.78464837584029!3d20.980544489431736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad1448c1df39%3A0xbcdf61f35cdd73e9!2zVHJ1bmcgdMOibSDEkMOgbyB04bqhbyBCxrB1IGNow61uaCBWaeG7hW4gdGjDtG5nIEk!5e0!3m2!1svi!2s!4v1711544988272!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <h5>VĂN PHÒNG PTIT AIRLINES TẠI TP.HỒ CHÍ MINH</h5>
-            <p>Địa chỉ: 11 Nguyễn Đình Chiểu, Phường Đa Kao, Quận 1, TP.Hồ Chí Minh</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.285394482676!2d106.69596509678956!3d10.789439900000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528b545b5903b%3A0x2381a6fe3f690419!2zSOG7jWMgdmnhu4duIEPDtG5nIG5naOG7hyBCxrB1IGNow61uaCBWaeG7hW4gdGjDtG5nIEPGoSBz4bufIHThuqFpIFRQLiBI4buTIENow60gTWluaA!5e0!3m2!1svi!2s!4v1711545143697!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </address>
-            <hr>
+            <div class="card-header">
+              <!-- Add onclick events to the buttons -->
+              <button type="button" onclick="showMap('hanoi')">VĂN PHÒNG PTIT AIRLINES TẠI HÀ NỘI</button>
+              <button type="button" onclick="showMap('hcm')">VĂN PHÒNG PTIT AIRLINES TẠI TP.HỒ CHÍ MINH</button>
+            </div>
+            <div id="officePayment">
+              <!-- Map containers -->
+              <div id="hanoi-map" style="display:none;">
+                <h5>VĂN PHÒNG PTIT AIRLINES TẠI HÀ NỘI</h5>
+                <p>Địa chỉ: Km10, Đường Nguyễn Trãi, Q.Hà Đông, Hà Nội</p>
+                <!-- Your Hanoi map iframe here -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.3015889884173!2d105.78464837584029!3d20.980544489431736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ad1448c1df39%3A0xbcdf61f35cdd73e9!2zVHJ1bmcgdMOibSDEkMOgbyB04bqhbyBCxrB1IGNow61uaCBWaeG7hW4gdGjDtG5nIEk!5e0!3m2!1svi!2s!4v1711544988272!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+        
+              <div id="hcm-map" style="display:none;">
+                <h5>VĂN PHÒNG PTIT AIRLINES TẠI TP.HỒ CHÍ MINH</h5>
+                <p>Địa chỉ: 11 Nguyễn Đình Chiểu, Phường Đa Kao, Quận 1, TP.Hồ Chí Minh</p>
+                <!-- Your Ho Chi Minh City map iframe here -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.285394482676!2d106.69596509678956!3d10.789439900000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528b545b5903b%3A0x2381a6fe3f690419!2zSOG7jWMgdmnhu4duIEPDtG5nIG5naOG7hyBCxrB1IGNow61uaCBWaeG7hW4gdGjDtG5nIEPGoSBz4bufIHThuqFpIFRQLiBI4buTIENow60gTWluaA!5e0!3m2!1svi!2s!4v1711545143697!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
           </div>
         </div>
+        
       </div>
       <div class="collapse" id="homePayment"  data-bs-parent="#paymentAccordion">
       <div class="card card-body">
@@ -216,91 +230,19 @@
   }
   </script>
   <script>
-    // Tabs
-    function openLink(evt, linkName) {
-      var i, x, tablinks;
-      x = document.getElementsByClassName("myLink");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
+    function showMap(location) {
+      var hanoiMap = document.getElementById('hanoi-map');
+      var hcmMap = document.getElementById('hcm-map');
+    
+      hanoiMap.style.display = 'none';
+      hcmMap.style.display = 'none';
+    
+      if (location === 'hanoi') {
+        hanoiMap.style.display = 'block';
+      } else if (location === 'hcm') {
+        hcmMap.style.display = 'block';
       }
-      tablinks = document.getElementsByClassName("tablink");
-      for (i = 0; i < x.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
-      }
-      document.getElementById(linkName).style.display = "block";
-      evt.currentTarget.className += " w3-red";
     }
-    0
-    // Click on the first tablink on load
-    document.getElementsByClassName("tablink")[0].click();
     </script>
-      <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-              e.preventDefault(); 
-              var target = document.querySelector(this.getAttribute('href'));
-              if(target) {
-                target.scrollIntoView({
-                  behavior: 'smooth', 
-                  block: 'start' 
-                });
-              }
-            });
-          });
-        });
-      </script>
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-  const loginForm = document.getElementById('form-2');
-  
-  loginForm.addEventListener('submit', function(e) {
-    e.preventDefault(); // Prevent form submission to validate first
-    
-    const emailInput = document.getElementById('email');
-    const passwordInput = document.getElementById('password');
-    const emailMessage = emailInput.nextElementSibling;
-    const passwordMessage = passwordInput.nextElementSibling;
-    
-    let isValid = true;
-    
-    // Validate Email
-    if (!validateEmail(emailInput.value)) {
-      emailMessage.textContent = 'Email không hợp lệ. Ví dụ: sivu@gmail.com';
-      isValid = false;
-    } else {
-      emailMessage.textContent = '';
-    }
-    
-    // Validate Password
-    if (!validatePassword(passwordInput.value)) {
-      passwordMessage.textContent = 'Mật khẩu phải chứa cả chữ và số.';
-      isValid = false;
-    } else {
-      passwordMessage.textContent = '';
-    }
-    
-    // If all validations pass, submit the form
-    if (isValid) {
-      // You might want to actually submit the form here.
-      // loginForm.submit();
-      console.log('Form is valid and can be submitted.');
-    }
-  });
-  
-  function validateEmail(email) {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-  }
-  
-  function validatePassword(password) {
-    const hasLetter = /[a-zA-Z]/.test(password);
-    const hasNumber = /\d/.test(password);
-    return hasLetter && hasNumber;
-  }
-});
-
-      </script>
-      
 </body>
 </html>
