@@ -85,57 +85,52 @@
   <div class="container my-3" >
     <div class="row" id="paymentAccordion" >
       <!-- Payment methods -->
-      <div class="col-lg-6">
-        <div class="list-group">
-          <a class="list-group-item list-group-item-action" data-bs-toggle="collapse" href="#bankDetails" role="button" aria-expanded="false" aria-controls="bankDetails">
-            Chuyển khoản ngân hàng
-          </a>
-          <a class="list-group-item list-group-item-action" data-bs-toggle="collapse" href="#officePayment" role="button" aria-expanded="false" aria-controls="officePayment">
-            Thanh toán tại văn phòng
-          </a>
-           <a class="list-group-item list-group-item-action" data-bs-toggle="collapse" href="#homePayment" role="button" aria-expanded="false" aria-controls="homePayment">
-        Thanh toán tại nhà quý khách
-      </a>
+      <div class="col-lg-3">
+        <!-- Nav pills -->
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link active" id="v-pills-bank-tab" data-bs-toggle="pill" href="#v-pills-bank" role="tab" aria-controls="v-pills-bank" aria-selected="true">Chuyển khoản ngân hàng</a>
+          <a class="nav-link" id="v-pills-office-tab" data-bs-toggle="pill" href="#v-pills-office" role="tab" aria-controls="v-pills-office" aria-selected="false">Thanh toán tại văn phòng</a>
+          <a class="nav-link" id="v-pills-home-tab" data-bs-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="false">Thanh toán tại nhà quý khách</a>
         </div>
       </div>
       <!-- Collapsible bank account details -->
-      <div class="col-lg-6">
-        <div class="collapse" id="bankDetails"  data-bs-parent="#paymentAccordion">
-          <!-- Agribank -->
-          <div class="card mb-3">
-            <div class="card-body">
-              <img src="https://www.elines.vn/static/payment3.png" class="float-start me-3" alt="Agribank logo" style="width:60px;">
-              <h6 class="card-title">Ngân Hàng TMCP Kỹ thương Việt Nam - Techcombank</h6>
-              <p class="card-text">Tên tài khoản: Công ty Cổ phần PTIT Airlines<br>
-                Số tài khoản: 8686 3103 2003br>
-                Chi Nhánh:  Thủ Đô
-              </p>
+      <div class="col-lg-9">
+        <div class="tab-content" id="v-pills-tabContent"  >
+          <div class="tab-pane fade show active" id="v-pills-bank" role="tabpanel" aria-labelledby="v-pills-bank-tab">
+            <!-- Agribank -->
+            <div class="card mb-3">
+              <div class="card-body">
+                <img src="https://www.elines.vn/static/payment3.png" class="float-start me-3" alt="Agribank logo" style="width:60px;">
+                <h6 class="card-title">Ngân Hàng TMCP Kỹ thương Việt Nam - Techcombank</h6>
+                <p class="card-text">Tên tài khoản: Công ty Cổ phần PTIT Airlines<br>
+                  Số tài khoản: 8686 3103 2003br>
+                  Chi Nhánh:  Thủ Đô
+                </p>
+              </div>
             </div>
-          </div>
-          <!-- MBBank -->
-          <div class="card mb-3">
-            <div class="card-body">
-              <img src="https://www.elines.vn/static/payment7.png" class="float-start me-3" alt="MBBank logo" style="width:60px;">
-              <h6 class="card-title">Ngân hàng TMCP Ngoại Thương Việt Nam - Vietcombank</h6>
-              <p class="card-text">Tên tài khoản: Công ty Cổ phần PTIT Airlines<br>
-                Số tài khoản: 0761 1002 58006<br>
-                Chi Nhánh:  Hà Nội
-              </p>
+            <!-- MBBank -->
+            <div class="card mb-3">
+              <div class="card-body">
+                <img src="https://www.elines.vn/static/payment7.png" class="float-start me-3" alt="MBBank logo" style="width:60px;">
+                <h6 class="card-title">Ngân hàng TMCP Ngoại Thương Việt Nam - Vietcombank</h6>
+                <p class="card-text">Tên tài khoản: Công ty Cổ phần PTIT Airlines<br>
+                  Số tài khoản: 0761 1002 58006<br>
+                  Chi Nhánh:  Hà Nội
+                </p>
+              </div>
             </div>
-          </div>
-          <!-- ACB -->
-          <div class="card">
-            <div class="card-body">
-              <img src="https://www.elines.vn/static/payment8.png" class="float-start me-3" alt="ACB logo" style="width:60px;">
-              <h6 class="card-title">Ngân hàng TMCP Đầu tư và phát triển Việt Nam - BIDV</h6>
-              <p class="card-text">Tên tài khoản: Công ty Cổ phần PTIT Airlines<br>
-                Số tài khoản: 152867789
-              </p>
+            <!-- ACB -->
+            <div class="card">
+              <div class="card-body">
+                <img src="https://www.elines.vn/static/payment8.png" class="float-start me-3" alt="ACB logo" style="width:60px;">
+                <h6 class="card-title">Ngân hàng TMCP Đầu tư và phát triển Việt Nam - BIDV</h6>
+                <p class="card-text">Tên tài khoản: Công ty Cổ phần PTIT Airlines<br>
+                  Số tài khoản: 152867789
+                </p>
+              </div>
             </div>
-          </div>
-        </div>
       </div>
-      <div class="collapse" id="officePayment"  data-bs-parent="#paymentAccordion">
+      <div class="tab-pane fade" id="v-pills-office" role="tabpanel" aria-labelledby="v-pills-office-tab">
         <div id="paymentAccordion">
           <div class="card">
             <p>Sau khi đặt hàng thành công, Quý khách vui lòng qua văn phòng PTIT Airlines để thanh toán và nhận vé.</p>
@@ -170,7 +165,7 @@
         </div>
         
       </div>
-      <div class="collapse" id="homePayment"  data-bs-parent="#paymentAccordion">
+      <div class="tab-pane fade" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
       <div class="card card-body">
         <strong>Nhân viên PTIT AIRLINES sẽ giao vé và thu tiền tại địa chỉ khách hàng cung cấp</strong>
         <ul>
@@ -188,6 +183,8 @@
         <hr>
       </div>
     </div>
+    </div>
+  </div>
     </div>
   </div>
 </section>

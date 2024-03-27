@@ -1,23 +1,31 @@
-<section class="modal" id="myModal">
-  <div class="modal-dialog">
-    <div class="modal-content">
-
-      <!-- Modal Header -->
-      <div class="modal-header">
-        <h4 class="modal-title">Modal Heading</h4>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+<section id="paymentOptions">
+  <div class="container my-3">
+    <div class="row">
+      <div class="col-lg-3">
+        <!-- Nav pills -->
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+          <a class="nav-link active" id="v-pills-bank-tab" data-bs-toggle="pill" href="#v-pills-bank" role="tab" aria-controls="v-pills-bank" aria-selected="true">Chuyển khoản ngân hàng</a>
+          <a class="nav-link" id="v-pills-office-tab" data-bs-toggle="pill" href="#v-pills-office" role="tab" aria-controls="v-pills-office" aria-selected="false">Thanh toán tại văn phòng</a>
+          <a class="nav-link" id="v-pills-home-tab" data-bs-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="false">Thanh toán tại nhà quý khách</a>
+        </div>
       </div>
-
-      <!-- Modal body -->
-      <div class="modal-body">
-        Modal body..
+      <div class="col-lg-9">
+        <!-- Tab content -->
+        <div class="tab-content" id="v-pills-tabContent">
+          <!-- Bank Transfer Tab -->
+          <div class="tab-pane fade show active" id="v-pills-bank" role="tabpanel" aria-labelledby="v-pills-bank-tab">
+            <!-- Bank details similar to previous HTML snippet -->
+          </div>
+          <!-- Office Payment Tab -->
+          <div class="tab-pane fade" id="v-pills-office" role="tabpanel" aria-labelledby="v-pills-office-tab">
+            <!-- Office payment details similar to previous HTML snippet -->
+          </div>
+          <!-- Home Payment Tab -->
+          <div class="tab-pane fade" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+            <!-- Home payment details similar to previous HTML snippet -->
+          </div>
+        </div>
       </div>
-
-      <!-- Modal footer -->
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-      </div>
-
     </div>
   </div>
 </section>
