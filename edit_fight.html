@@ -91,7 +91,7 @@
         <p id="info-content"></p>
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="them-chuyen-bay-tab" data-bs-toggle="tab" data-bs-target="#them-chuyen-bay" type="button" role="tab" aria-controls="them-chuyen-bay" aria-selected="false">Sửa Chuyến Bay</button>
+                <button class="nav-link active " id="them-chuyen-bay-tab" data-bs-toggle="tab" data-bs-target="#them-chuyen-bay" type="button" role="tab" aria-controls="them-chuyen-bay" aria-selected="true">Sửa Chuyến Bay</button>
             </li>
         </ul>
         <div class="tab-content" id="myTabContent">
@@ -122,16 +122,16 @@
                         <input type="text" class="form-control" id="flight-number" name="flight-number">
                     </div>
                     <div class="mb-3">
-                        <label for="departure-date" class="form-label">Ngày xuất phát:</label>
-                        <input type="date" class="form-control" id="departure-date" name="departure-date">
+                        <label for="departure-date" class="form-label">Ngày xuất phát (Ngày/tháng/năm - dd/mm/yyyy):</label>
+                        <input type="text" class="form-control" id="departure-date" name="departure-date">
                     </div>
                     <div class="mb-3">
                         <label for="departure" class="form-label">Giờ khởi hành:</label>
-                        <input type="time" class="form-control" id="departure" name="departure">
+                        <input type="text" class="form-control" id="departure" name="departure">
                     </div>
                     <div class="mb-3">
                         <label for="arrival" class="form-label">Thời gian đến:</label>
-                        <input type="time" class="form-control" id="arrival" name="arrival">
+                        <input type="text" class="form-control" id="arrival" name="arrival">
                     </div>
                     <button type="submit" class="btn btn-primary">Lưu</button>
                 </form>
