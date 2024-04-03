@@ -106,57 +106,57 @@
     </footer>
     <!-- <script src="../validator.js"></script> -->
     <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const emailInput = document.getElementById('email');
-  const passwordInput = document.getElementById('password');
-  const confirmPasswordInput = document.getElementById('confirm-password');
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('form-1');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const confirmPasswordInput = document.getElementById('confirm-password');
+    const emailMessage = document.querySelector('#email + .form-message');
+    const passwordMessage = document.querySelector('#password + .form-message');
+    const confirmPasswordMessage = document.querySelector('#confirm-password + .form-message');
+    const submitButton = form.querySelector('button[type="submit"]');
 
-  // Validation as the user types or moves out of the input field
-  emailInput.addEventListener('input', validateEmailField);
-  passwordInput.addEventListener('input', validatePasswordField);
-  confirmPasswordInput.addEventListener('input', validateConfirmPasswordField);
+    const validateEmail = (email) => {
+        if (!email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+            emailMessage.textContent = 'Email không hợp lệ. Ví dụ: sivu@gmail.com';
+            return false;
+        }
+        emailMessage.textContent = '';
+        return true;
+    };
 
-  function validateEmailField() {
-    const emailMessage = emailInput.nextElementSibling;
-    if (!validateEmail(emailInput.value)) {
-      emailMessage.textContent = 'Email không hợp lệ. Ví dụ: sivu@gmail.com';
-    } else {
-      emailMessage.textContent = '';
-    }
-  }
+    const validatePassword = (password) => {
+        if (!(password.length >= 6 && /[a-zA-Z]/.test(password) && /\d/.test(password))) {
+            passwordMessage.textContent = 'Mật khẩu phải có ít nhất 6 ký tự và bao gồm cả chữ và số.';
+            return false;
+        }
+        passwordMessage.textContent = '';
+        return true;
+    };
 
-  function validatePasswordField() {
-    const passwordMessage = passwordInput.nextElementSibling;
-    if (!validatePassword(passwordInput.value)) {
-      passwordMessage.textContent = 'Mật khẩu phải có ít nhất 6 ký tự và bao gồm cả chữ và số.';
-    } else {
-      passwordMessage.textContent = '';
-      // Check confirm password again in case it was entered before the password
-      validateConfirmPasswordField();
-    }
-  }
+    const checkPasswordsMatch = () => {
+        if (passwordInput.value !== confirmPasswordInput.value) {
+            confirmPasswordMessage.textContent = 'Mật khẩu xác nhận không khớp. Vui lòng nhập lại.';
+            return false;
+        }
+        confirmPasswordMessage.textContent = '';
+        return true;
+    };
 
-  function validateConfirmPasswordField() {
-    const confirmPasswordMessage = confirmPasswordInput.nextElementSibling;
-    if (passwordInput.value !== confirmPasswordInput.value) {
-      confirmPasswordMessage.textContent = 'Mật khẩu xác nhận không khớp. Vui lòng nhập lại.';
-    } else {
-      confirmPasswordMessage.textContent = '';
-    }
-  }
+    const updateSubmitButtonState = () => {
+        const isValid = validateEmail(emailInput.value) && validatePassword(passwordInput.value) && checkPasswordsMatch();
+        submitButton.disabled = !isValid;
+        if (!isValid) {
+            submitButton.classList.add('button-disabled');
+        } else {
+            submitButton.classList.remove('button-disabled');
+        }
+    };
 
-  function validateEmail(email) {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-  }
-  
-  function validatePassword(password) {
-    const minLength = 6;
-    const hasLetter = /[a-zA-Z]/.test(password);
-    const hasNumber = /\d/.test(password);
-    return password.length >= minLength && hasLetter && hasNumber;
-  }
+    form.addEventListener('input', updateSubmitButtonState);
 });
+
+
 
 
     </script>
